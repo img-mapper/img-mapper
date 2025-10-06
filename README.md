@@ -106,7 +106,7 @@ export default Mapper;
 | `imgProps`       | _object_                   | Props for the `<img>` element                                     | `null`                     |
 | `canvasProps`    | _object_                   | Props for the `<canvas>` element                                  | `null`                     |
 | `mapProps`       | _object_                   | Props for the `<map>` element                                     | `null`                     |
-| `areaProps`      | _object_                   | Props for the `<area>` elements                                   | `null`                     |
+| `areaProps`      | _object_ \| _array_        | Props for the `<area>` elements                                   | `null`                     |
 
 ---
 

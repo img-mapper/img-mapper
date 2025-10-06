@@ -95,7 +95,7 @@ export interface ImageMapperProps {
   imgProps?: ImgProps;
   canvasProps?: CanvasProps;
   mapProps?: MapProps;
-  areaProps?: AreaProps;
+  areaProps?: AreaProps | AreaProps[];
 
   onChange?: ChangeEventHandler;
   onImageClick?: ImageEventHandler;

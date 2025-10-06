@@ -259,24 +259,37 @@ const ImageMapper: FC<ImageMapperPropsWithRef> = ({ ref, ...props }) => {
 
   const renderAreas = (): ReactNode =>
     areas.map((area, index) => {
+      const { areaKeyName: areaKeyNameProp } = props;
+
       const { scaledCoords } = getExtendedArea(area, { img, ...scaleCoordsParams }, areaParams);
 
       if (area.disabled) return null;
 
       const { preFillColor, shape, href } = area;
+      const currentAreaProps = (() => {
+        if (Array.isArray(areaProps)) {
+          if (areaKeyNameProp) {
+            return areaProps.find(cur => cur && cur[areaKeyNameProp] === area[areaKeyNameProp]);
+          }
+
+          return areaProps[index];
+        }
+
+        return areaProps;
+      })();
 
       return (
         <area
           alt="map"
-          {...areaProps}
+          {...currentAreaProps}
           className={[
             'img-mapper-area',
             ...(preFillColor ? ['img-mapper-area-highlighted'] : []),
-            ...(areaProps?.className ? [areaProps.className] : []),
+            ...(currentAreaProps?.className ? [currentAreaProps.className] : []),
           ].join(' ')}
           key={area[areaKeyName] ?? index.toString()}
-          href={href ?? areaProps?.href}
-          shape={shape ?? areaProps?.shape}
+          href={href ?? currentAreaProps?.href}
+          shape={shape ?? currentAreaProps?.shape}
           coords={scaledCoords.join(',')}
           onMouseEnter={mouseEnter({ area, index }, { onMouseEnter, cb: handleMouseEnter })}
           onMouseLeave={mouseLeave({ area, index }, { onMouseLeave, cb: handleMouseLeave })}
