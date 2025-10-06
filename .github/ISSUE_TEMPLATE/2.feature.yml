@@ -3,11 +3,8 @@ description: Suggest an idea for this project
 assignees:
   - NishargShah
 labels:
+  - new
   - enhancement
-  - feature
-  - help wanted
-  - question
-type: Feature
 body:
   - type: markdown
     attributes:

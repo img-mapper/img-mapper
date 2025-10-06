@@ -3,10 +3,8 @@ description: Create a bug report
 assignees:
   - NishargShah
 labels:
+  - new
   - bug
-  - help wanted
-  - question
-type: Bug
 body:
   - type: markdown
     attributes:
