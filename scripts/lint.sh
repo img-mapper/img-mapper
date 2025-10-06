@@ -1,39 +1,55 @@
 #!/bin/bash
 
-forPush="--for-push"
-isForPush="$( [[ $1 == $forPush ]]; echo $? )"
+mode="fix"
 
-cleanup() {
-  if [[ $isForPush == "0" ]]; then
-      git stash pop -q
-      rm .script
-      echo "Stash Applied"
-  fi
-}
+filters=()
 
-echo "Started"
-trap '[[ $? -ne 0 ]] && cleanup' EXIT
+for arg in "$@"; do
+  case $arg in
+  --for=*)
+    mode="${arg#--for=}"
+    ;;
+  --filter=*)
+    filterArg="${arg#--filter=}"
+    IFS=',' read -ra userFilters <<<"$filterArg"
+    for monorepo in "${userFilters[@]}"; do
+      filters+=(--filter "$monorepo")
+    done
+    ;;
+  esac
+done
 
-if [[ $isForPush == "0" ]]; then
-    touch .script
-    git stash push -uqm "Backup of auto commit functionality"
-    echo "Stash Stored"
-fi
+echo "Started (mode: $mode)"
 
-pnpm --silent prettier:fix --log-level silent
-echo "Prettier Completed"
-pnpm --silent lint:fix
-echo "Eslint Completed"
-pnpm --silent ts
-echo "Typescript Completed"
+if [[ "$mode" == "ci" ]]; then
+  pnpm "${filters[@]}" --silent format:check --log-level silent >/dev/null 2>&1
+  echo "Prettier Verified"
 
-if [[ $isForPush == "0" ]]; then
-    git add .
-    if ! git diff-index --quiet HEAD; then
-      git commit -m "refactor: code reformatted" -q
-      echo "Commit Completed"
-    fi
-    cleanup
+  pnpm "${filters[@]}" --silent lint >/dev/null 2>&1
+  echo "ESLint Verified"
+
+  pnpm "${filters[@]}" --silent typecheck >/dev/null 2>&1
+  echo "TypeScript Verified"
+
+elif [[ "$mode" == "check" ]]; then
+  pnpm "${filters[@]}" --silent format:check --log-level silent
+  echo "Prettier Checked"
+
+  pnpm "${filters[@]}" --silent lint
+  echo "ESLint Checked"
+
+  pnpm "${filters[@]}" --silent typecheck
+  echo "TypeScript Checked"
+
+else
+  pnpm "${filters[@]}" --silent format:fix --log-level silent
+  echo "Prettier Completed"
+
+  pnpm "${filters[@]}" --silent lint:fix
+  echo "ESLint Completed"
+
+  pnpm "${filters[@]}" --silent typecheck
+  echo "TypeScript Completed"
 fi
 
 echo "Done"
