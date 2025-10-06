@@ -1,4 +1,9 @@
-import type { Dimension, ImageMapperProps, Refs, WidthHeight } from '@/types';
+import type {
+  Dimension,
+  ImageMapperProps,
+  Refs,
+  WidthHeight,
+} from 'packages/react-img-mapper/types';
 import type { MutableRefObject } from 'react';
 
 type ImgRef = MutableRefObject<Refs['imgRef']>;

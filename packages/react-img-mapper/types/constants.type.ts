@@ -1,4 +1,4 @@
-import type { ImageMapperProps } from '@/types/index';
+import type { ImageMapperProps } from 'packages/react-img-mapper/types/index';
 
 type RequiredProps = 'src' | 'name' | 'areas';
 

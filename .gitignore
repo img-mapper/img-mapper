@@ -9,6 +9,7 @@ coverage
 # production
 build
 dist
+cache
 
 # misc
 .DS_Store
@@ -19,6 +20,9 @@ dist
 
 # local env files
 .env*.local
+
+# vercel
+.vercel
 
 # typescript
 *.tsbuildinfo

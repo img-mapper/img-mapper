@@ -10,10 +10,14 @@ import React, {
 
 import isEqual from 'react-fast-compare';
 
-import { getExtendedArea } from '@/helpers/area';
-import { generateProps, rerenderPropsList } from '@/helpers/constants';
-import { getDimension, getDimensions, getPropDimension } from '@/helpers/dimensions';
-import drawShape from '@/helpers/draw';
+import { getExtendedArea } from 'packages/react-img-mapper/helpers/area';
+import { generateProps, rerenderPropsList } from 'packages/react-img-mapper/helpers/constants';
+import {
+  getDimension,
+  getDimensions,
+  getPropDimension,
+} from 'packages/react-img-mapper/helpers/dimensions';
+import drawShape from 'packages/react-img-mapper/helpers/draw';
 import {
   click,
   imageClick,
@@ -25,15 +29,15 @@ import {
   mouseUp,
   touchEnd,
   touchStart,
-} from '@/helpers/events';
-import styles from '@/helpers/styles';
+} from 'packages/react-img-mapper/helpers/events';
+import styles from 'packages/react-img-mapper/helpers/styles';
 
-import type { ImageMapperPropsWithRef, MapArea, Refs } from '@/types';
-import type { PrevStateRef } from '@/types/dimensions.type';
-import type { CTX } from '@/types/draw.type';
+import type { ImageMapperPropsWithRef, MapArea, Refs } from 'packages/react-img-mapper/types';
+import type { PrevStateRef } from 'packages/react-img-mapper/types/dimensions.type';
+import type { CTX } from 'packages/react-img-mapper/types/draw.type';
 import type { FC, ReactNode } from 'react';
 
-export type * from '@/types';
+export type * from 'packages/react-img-mapper/types';
 
 const ImageMapper: FC<ImageMapperPropsWithRef> = ({ ref, ...props }) => {
   const generatedProps = generateProps(props);

@@ -1,33 +1,28 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "ES6",
     "module": "CommonJS",
     "lib": ["dom", "dom.iterable", "esnext"],
     "strict": true,
+    "noImplicitReturns": true,
     "forceConsistentCasingInFileNames": true,
     "esModuleInterop": true,
     "moduleResolution": "node",
     "resolveJsonModule": true,
+    "useUnknownInCatchVariables": true,
     "isolatedModules": true,
-    "jsx": "react",
-    "declaration": true,
-    "outDir": "./dist",
-    "baseUrl": ".",
-    "paths": {
-      "@/*": ["./src/*"],
-      "@playground/*": ["./playground/src/*"],
-      "@resources/*": ["./resources/*"]
-    },
-    "plugins": [
-      {
-        "transform": "typescript-transform-paths"
-      },
-      {
-        "transform": "typescript-transform-paths",
-        "afterDeclarations": true
-      }
-    ]
+    "declaration": true
   },
-  "include": ["**/*.ts", "**/*.tsx", "**/*.mjs", "**/*.mts"],
-  "exclude": ["node_modules", "dist", "playground"]
+  "files": [],
+  "references": [
+    {
+      "path": "packages/react-img-mapper"
+    },
+    {
+      "path": "packages/react-img-mapper-docs"
+    },
+    {
+      "path": "packages/react-img-mapper-playground"
+    }
+  ]
 }

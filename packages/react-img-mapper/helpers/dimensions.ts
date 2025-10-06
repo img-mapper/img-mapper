@@ -3,7 +3,7 @@ import type {
   GetDimensionValues,
   GetDimensions,
   GetPropDimension,
-} from '@/types/dimensions.type';
+} from 'packages/react-img-mapper/types/dimensions.type';
 
 export const getDimension: GetDimension = (dimension, img) => {
   if (!img.current) return 0;

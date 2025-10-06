@@ -1,5 +1,5 @@
-import type { ImageMapperProps } from '@/types';
-import type { ImageMapperDefaultProps } from '@/types/constants.type';
+import type { ImageMapperProps } from 'packages/react-img-mapper/types';
+import type { ImageMapperDefaultProps } from 'packages/react-img-mapper/types/constants.type';
 
 export const rerenderPropsList = [
   'src',

@@ -1,5 +1,5 @@
-import type { Area, ImageMapperProps, MapArea } from '@/types';
-import type { GetPropDimensionParams } from '@/types/dimensions.type';
+import type { Area, ImageMapperProps, MapArea } from 'packages/react-img-mapper/types';
+import type { GetPropDimensionParams } from 'packages/react-img-mapper/types/dimensions.type';
 
 type ScaleCoordsParams = GetPropDimensionParams &
   Pick<Required<ImageMapperProps>, 'responsive' | 'parentWidth' | 'imgWidth'>;

@@ -1,4 +1,4 @@
-import type { ImageMapperProps } from '@/types';
+import type { ImageMapperProps } from 'packages/react-img-mapper/types';
 import type { CSSProperties } from 'react';
 
 export interface StylesProps {
