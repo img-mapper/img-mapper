@@ -6,18 +6,7 @@
 }
 
 body {
-  font-family:
-    Ubuntu,
-    'Nunito Sans',
-    -apple-system,
-    '.SFNSText-Regular',
-    'San Francisco',
-    BlinkMacSystemFont,
-    'Segoe UI',
-    'Helvetica Neue',
-    Helvetica,
-    Arial,
-    sans-serif;
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
 }
 
 p {
@@ -53,8 +42,8 @@ p {
 
 .top_container {
   margin-bottom: 2rem;
+}
 
-  .top_content {
-    line-height: 1.5;
-  }
+.top_container .top_content {
+  line-height: 1.5;
 }

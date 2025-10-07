@@ -1,10 +1,5 @@
-import React from 'react';
-
 const SimpleApp = {
   title: 'Introduction',
-  parameters: {
-    controls: { hideNoControlsWarning: true },
-  },
 };
 
 export const Introduction = () => (

@@ -1,6 +1,6 @@
-import common from './common';
+import mapper from '@/functions/mapper';
 
-export const fillColor = common(`(
+export const fillColorCode = mapper(`(
     <ImageMapper 
       src={url} 
       name={name}
@@ -8,7 +8,7 @@ export const fillColor = common(`(
     />
   )`);
 
-export const inArrayFillColor = common(`(
+export const inArrayFillColorCode = mapper(`(
     <ImageMapper 
       src={url} 
       name={name}
@@ -16,7 +16,7 @@ export const inArrayFillColor = common(`(
     />
   )`);
 
-export const dynamicFillColor = common(`(
+export const dynamicFillColorCode = mapper(`(
     <ImageMapper 
       src={url} 
       name={name}
@@ -25,7 +25,7 @@ export const dynamicFillColor = common(`(
    />
   )`);
 
-export const dynamicMixArrayFillColor = common(`(
+export const dynamicMixArrayFillColorCode = mapper(`(
     <ImageMapper 
       src={url} 
       name={name}
@@ -34,7 +34,7 @@ export const dynamicMixArrayFillColor = common(`(
    />
   )`);
 
-export const strokeColor = common(`(
+export const strokeColorCode = mapper(`(
     <ImageMapper 
       src={url} 
       name={name}
@@ -43,7 +43,7 @@ export const strokeColor = common(`(
    />
   )`);
 
-export const inArrayStrokeColor = common(`(
+export const inArrayStrokeColorCode = mapper(`(
     <ImageMapper 
       src={url} 
       name={name}
@@ -52,7 +52,7 @@ export const inArrayStrokeColor = common(`(
    />
   )`);
 
-export const dynamicStrokeColor = common(`(
+export const dynamicStrokeColorCode = mapper(`(
     <ImageMapper 
       src={url} 
       name={name}
@@ -62,7 +62,7 @@ export const dynamicStrokeColor = common(`(
    />
   )`);
 
-export const dynamicMixArrayStrokeColor = common(`(
+export const dynamicMixArrayStrokeColorCode = mapper(`(
     <ImageMapper 
       src={url} 
       name={name}

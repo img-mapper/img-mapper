@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "ES6",
+    "target": "es5",
     "module": "CommonJS",
     "lib": ["dom", "dom.iterable", "esnext"],
     "strict": true,
@@ -11,7 +11,8 @@
     "resolveJsonModule": true,
     "useUnknownInCatchVariables": true,
     "isolatedModules": true,
-    "declaration": true
+    "declaration": true,
+    "jsx": "react"
   },
   "files": [],
   "references": [

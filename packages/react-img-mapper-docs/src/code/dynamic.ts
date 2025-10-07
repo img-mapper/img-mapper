@@ -1,6 +1,6 @@
-import common from './common';
+import mapper from '@/functions/mapper';
 
-export const dynamicAllProperties = common(`(
+export const dynamicAllPropertiesCode = mapper(`(
     <ImageMapper 
       src={url} 
       name={name}

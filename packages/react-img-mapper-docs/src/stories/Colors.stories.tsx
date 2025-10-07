@@ -1,23 +1,21 @@
 import React from 'react';
-import Mapper from './components/Mapper';
-import { TopComponent } from './codes/common';
+import Mapper from '@/components/Mapper';
+
+import TopComponent from '@/components/TopComponent';
 import {
-  fillColor,
-  inArrayFillColor,
-  dynamicFillColor,
-  dynamicMixArrayFillColor,
-  strokeColor,
-  inArrayStrokeColor,
-  dynamicStrokeColor,
-  dynamicMixArrayStrokeColor,
-} from './codes/colors';
+  dynamicFillColorCode,
+  dynamicMixArrayFillColorCode,
+  dynamicMixArrayStrokeColorCode,
+  dynamicStrokeColorCode,
+  fillColorCode,
+  inArrayFillColorCode,
+  inArrayStrokeColorCode,
+  strokeColorCode,
+} from '@/code/colors';
 
 const Colors = {
   title: 'Examples/Colors',
   component: Mapper,
-  parameters: {
-    controls: { hideNoControlsWarning: true },
-  },
 };
 
 // 1 => FillColor
@@ -32,14 +30,14 @@ export const FillColor = () => (
           In this example, the <span className="tag">fillColor</span> property is not available in{' '}
           <span className="tag">areas</span> JSON, that's why it's giving the default behavior of
           mapper by applying default <span className="tag">fillColor</span>.
-        </p>
+        </p>,
       )
     }
   />
 );
 
 FillColor.parameters = {
-  code: fillColor,
+  code: fillColorCode,
 };
 
 // 2 => InArrayFillColor
@@ -54,18 +52,18 @@ export const InArrayFillColor = () => (
           <span className="tag">areas</span> JSON, that's why it's applying{' '}
           <span className="tag">fillColor</span> from JSON and we can see different{' '}
           <span className="tag">fillColor</span> for different <span className="tag">areas</span>.
-        </p>
+        </p>,
       )
     }
   />
 );
 
 InArrayFillColor.parameters = {
-  code: inArrayFillColor,
+  code: inArrayFillColorCode,
 };
 
 // 3 => DynamicFillColor
-export const DynamicFillColor = args => (
+export const DynamicFillColor = (args) => (
   <Mapper
     customType="fill"
     customJSON={0}
@@ -82,14 +80,14 @@ export const DynamicFillColor = args => (
           <span className="block">
             Note: For better results you can decrease the opacity of the fillColor.
           </span>
-        </p>
+        </p>,
       )
     }
   />
 );
 
 DynamicFillColor.parameters = {
-  code: dynamicFillColor,
+  code: dynamicFillColorCode,
 };
 
 DynamicFillColor.args = {
@@ -101,7 +99,7 @@ DynamicFillColor.argTypes = {
 };
 
 // 4 => DynamicMixArrayFillColor
-export const DynamicMixArrayFillColor = args => (
+export const DynamicMixArrayFillColor = (args) => (
   <Mapper
     customType="fill"
     customJSON={1}
@@ -122,14 +120,14 @@ export const DynamicMixArrayFillColor = args => (
             Note: <span className="tag">fillColor</span> property for the remaining area is already
             available in the JSON area
           </span>
-        </p>
+        </p>,
       )
     }
   />
 );
 
 DynamicMixArrayFillColor.parameters = {
-  code: dynamicMixArrayFillColor,
+  code: dynamicMixArrayFillColorCode,
 };
 
 DynamicMixArrayFillColor.args = {
@@ -153,14 +151,14 @@ export const StrokeColor = () => (
           In this example, the <span className="tag">strokeColor</span> property is not available in{' '}
           <span className="tag">areas</span> JSON, that's why it's giving the default behavior of
           mapper by applying default <span className="tag">strokeColor</span>.
-        </p>
+        </p>,
       )
     }
   />
 );
 
 StrokeColor.parameters = {
-  code: strokeColor,
+  code: strokeColorCode,
 };
 
 // 6 => InArrayStrokeColor
@@ -175,18 +173,18 @@ export const InArrayStrokeColor = () => (
           In this example, the <span className="tag">strokeColor</span> property is available in{' '}
           <span className="tag">areas</span> JSON, that's why it's applying{' '}
           <span className="tag">strokeColor</span> from JSON.
-        </p>
+        </p>,
       )
     }
   />
 );
 
 InArrayStrokeColor.parameters = {
-  code: inArrayStrokeColor,
+  code: inArrayStrokeColorCode,
 };
 
 // 7 => DynamicStrokeColor
-export const DynamicStrokeColor = args => (
+export const DynamicStrokeColor = (args) => (
   <Mapper
     customType="stroke"
     customJSON={0}
@@ -202,14 +200,14 @@ export const DynamicStrokeColor = args => (
             <span className="tag">lineWidth</span> properties and change it according to your
             preference.
           </p>
-        </p>
+        </p>,
       )
     }
   />
 );
 
 DynamicStrokeColor.parameters = {
-  code: dynamicStrokeColor,
+  code: dynamicStrokeColorCode,
 };
 
 DynamicStrokeColor.args = {
@@ -223,7 +221,7 @@ DynamicStrokeColor.argTypes = {
 };
 
 // 8 => DynamicMixArrayStrokeColor
-export const DynamicMixArrayStrokeColor = args => (
+export const DynamicMixArrayStrokeColor = (args) => (
   <Mapper
     customType="stroke"
     customJSON={1}
@@ -247,14 +245,14 @@ export const DynamicMixArrayStrokeColor = args => (
             Note: <span className="tag">strokeColor</span> property for the remaining area is
             already available in the JSON area
           </span>
-        </p>
+        </p>,
       )
     }
   />
 );
 
 DynamicMixArrayStrokeColor.parameters = {
-  code: dynamicMixArrayStrokeColor,
+  code: dynamicMixArrayStrokeColorCode,
 };
 
 DynamicMixArrayStrokeColor.args = {

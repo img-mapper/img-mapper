@@ -1,18 +1,19 @@
 import React from 'react';
-import Mapper from './components/Mapper';
-import { TopComponent } from './codes/common';
-import { nonResponsiveDimensions, responsiveDimensions, allDimensions } from './codes/map';
+import Mapper from '@/components/Mapper';
+import TopComponent from '@/components/TopComponent';
+import {
+  nonResponsiveDimensionsCode,
+  responsiveDimensionsCode,
+  allDimensionsCode,
+} from '@/code/map';
 
 const Map = {
   title: 'Examples/Responsive Map',
   component: Mapper,
-  parameters: {
-    controls: { hideNoControlsWarning: true },
-  },
 };
 
 // 1 => NonResponsiveDimensions
-export const NonResponsiveDimensions = args => (
+export const NonResponsiveDimensions = (args) => (
   <Mapper
     width={args.width}
     height={args.height}
@@ -36,14 +37,14 @@ export const NonResponsiveDimensions = args => (
             Note: All the properties description and what it does it's available in{' '}
             <span className="tag">react img mapper</span> Github repo.
           </span>
-        </p>
+        </p>,
       )
     }
   />
 );
 
 NonResponsiveDimensions.parameters = {
-  code: nonResponsiveDimensions,
+  code: nonResponsiveDimensionsCode,
 };
 
 NonResponsiveDimensions.args = {
@@ -61,7 +62,7 @@ NonResponsiveDimensions.argTypes = {
 };
 
 // 2 => ResponsiveDimensions
-export const ResponsiveDimensions = args => (
+export const ResponsiveDimensions = (args) => (
   <Mapper
     responsive
     parentWidth={args.parentWidth}
@@ -83,14 +84,14 @@ export const ResponsiveDimensions = args => (
             Note: All the properties description and what it does it's available in{' '}
             <span className="tag">react img mapper</span> Github repo.
           </span>
-        </p>
+        </p>,
       )
     }
   />
 );
 
 ResponsiveDimensions.parameters = {
-  code: responsiveDimensions,
+  code: responsiveDimensionsCode,
 };
 
 ResponsiveDimensions.args = {
@@ -102,7 +103,7 @@ ResponsiveDimensions.argTypes = {
 };
 
 // 3 => AllDimensions
-export const AllDimensions = args => (
+export const AllDimensions = (args) => (
   <Mapper
     width={args.width}
     height={args.height}
@@ -126,14 +127,14 @@ export const AllDimensions = args => (
           <br />
           <br />
           It's is a mixture of all responsive & non-responsive properties, have fun.
-        </p>
+        </p>,
       )
     }
   />
 );
 
 AllDimensions.parameters = {
-  code: allDimensions,
+  code: allDimensionsCode,
 };
 
 AllDimensions.args = {

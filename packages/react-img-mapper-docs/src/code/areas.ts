@@ -1,6 +1,9 @@
-import common, { clearButtonTemplate, commonWithState, zoomTemplate } from './common';
+import mapper from '@/functions/mapper';
+import mapperWithState from '@/functions/mapperWithState';
+import clearButtonTemplate from '@/templates/clearButtonTemplate';
+import zoomTemplate from '@/templates/zoomTemplate';
 
-export const showHighlightedArea = common(`(
+export const showHighlightedAreaCode = mapper(`(
     <ImageMapper 
       src={url} 
       name={name}
@@ -9,7 +12,7 @@ export const showHighlightedArea = common(`(
    />
   )`);
 
-export const inArrayShowHighlightedArea = common(`(
+export const inArrayShowHighlightedAreaCode = mapper(`(
     <ImageMapper 
       src={url} 
       name={name}
@@ -17,7 +20,7 @@ export const inArrayShowHighlightedArea = common(`(
     />
   )`);
 
-export const disabledArea = common(`(
+export const disabledAreaCode = mapper(`(
     <ImageMapper 
       src={url} 
       name={name}
@@ -26,9 +29,9 @@ export const disabledArea = common(`(
    />
   )`);
 
-export const inArrayDisabledArea = inArrayShowHighlightedArea;
+export const inArrayDisabledAreaCode = inArrayShowHighlightedAreaCode;
 
-export const staySelectedHighlightedArea = commonWithState(`(
+export const staySelectedHighlightedAreaCode = mapperWithState(`(
     <ImageMapper 
       src={url} 
       name={name}
@@ -38,7 +41,7 @@ export const staySelectedHighlightedArea = commonWithState(`(
    />
   )`);
 
-export const stayMultipleSelectedHighlightedArea = commonWithState(`(
+export const stayMultipleSelectedHighlightedAreaCode = mapperWithState(`(
     <ImageMapper 
       src={url} 
       name={name}
@@ -48,9 +51,9 @@ export const stayMultipleSelectedHighlightedArea = commonWithState(`(
    />
   )`);
 
-export const clearSelectedHighlightedArea = clearButtonTemplate;
+export const clearSelectedHighlightedAreaCode = clearButtonTemplate;
 
-export const toggleStayHighlightedArea = commonWithState(`(
+export const toggleStayHighlightedAreaCode = mapperWithState(`(
     <ImageMapper 
       src={url} 
       name={name}
@@ -61,4 +64,4 @@ export const toggleStayHighlightedArea = commonWithState(`(
    />
   )`);
 
-export const zoomInZoomOutArea = zoomTemplate;
+export const zoomInZoomOutAreaCode = zoomTemplate;

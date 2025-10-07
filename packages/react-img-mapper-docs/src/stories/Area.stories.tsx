@@ -1,28 +1,26 @@
 import React, { useState, useRef } from 'react';
-import Mapper from './components/Mapper';
-import { TopComponent } from './codes/common';
+import Mapper from '@/components/Mapper';
+
+import TopComponent from '@/components/TopComponent';
 import {
-  showHighlightedArea,
-  inArrayShowHighlightedArea,
-  disabledArea,
-  inArrayDisabledArea,
-  staySelectedHighlightedArea,
-  stayMultipleSelectedHighlightedArea,
-  clearSelectedHighlightedArea,
-  toggleStayHighlightedArea,
-  zoomInZoomOutArea,
-} from './codes/areas';
+  showHighlightedAreaCode,
+  inArrayShowHighlightedAreaCode,
+  disabledAreaCode,
+  staySelectedHighlightedAreaCode,
+  stayMultipleSelectedHighlightedAreaCode,
+  toggleStayHighlightedAreaCode,
+  inArrayDisabledAreaCode,
+  clearSelectedHighlightedAreaCode,
+  zoomInZoomOutAreaCode,
+} from '@/code/areas';
 
 const Area = {
   title: 'Examples/Area',
   component: Mapper,
-  parameters: {
-    controls: { hideNoControlsWarning: true },
-  },
 };
 
 // 1 => ShowHighlightedArea
-export const ShowHighlightedArea = args => (
+export const ShowHighlightedArea = (args) => (
   <Mapper
     active={args.active}
     TopComponent={() =>
@@ -33,14 +31,14 @@ export const ShowHighlightedArea = args => (
           to dynamically choose if you wish to <span className="tag">hide/see</span> the highlight
           area according to your preference with the help of <span className="tag">active</span>{' '}
           toggle button.
-        </p>
+        </p>,
       )
     }
   />
 );
 
 ShowHighlightedArea.parameters = {
-  code: showHighlightedArea,
+  code: showHighlightedAreaCode,
 };
 
 ShowHighlightedArea.args = {
@@ -71,18 +69,18 @@ export const InArrayShowHighlightedArea = () => (
             Note: default is <span className="tag">true</span> for{' '}
             <span className="tag">active</span> property for the remaining area
           </span>
-        </p>
+        </p>,
       )
     }
   />
 );
 
 InArrayShowHighlightedArea.parameters = {
-  code: inArrayShowHighlightedArea,
+  code: inArrayShowHighlightedAreaCode,
 };
 
 // 3 => DisabledArea
-export const DisabledArea = args => (
+export const DisabledArea = (args) => (
   <Mapper
     disabled={args.disabled}
     TopComponent={() =>
@@ -93,14 +91,14 @@ export const DisabledArea = args => (
           to dynamically choose if you wish to <span className="tag">disable/enable</span> the
           listeners and highlight area according to your preference with the help of{' '}
           <span className="tag">disabled</span> toggle button.
-        </p>
+        </p>,
       )
     }
   />
 );
 
 DisabledArea.parameters = {
-  code: disabledArea,
+  code: disabledAreaCode,
 };
 
 DisabledArea.args = {
@@ -130,14 +128,14 @@ export const InArrayDisabledArea = () => (
             Note: default is <span className="tag">false</span> for{' '}
             <span className="tag">disabled</span> property for the remaining area
           </span>
-        </p>
+        </p>,
       )
     }
   />
 );
 
 InArrayDisabledArea.parameters = {
-  code: inArrayDisabledArea,
+  code: inArrayDisabledAreaCode,
 };
 
 // 5 => StaySelectedHighlightedArea
@@ -153,14 +151,14 @@ export const StaySelectedHighlightedArea = () => (
           <span className="tag">area</span> you want to keep
           <span className="tag">highlighted</span>, just by clicking and you can still be able to
           highlight the <span className="tag">remaining</span> area on hover.
-        </p>
+        </p>,
       )
     }
   />
 );
 
 StaySelectedHighlightedArea.parameters = {
-  code: staySelectedHighlightedArea,
+  code: staySelectedHighlightedAreaCode,
 };
 
 // 6 => StayMultipleSelectedHighlightedArea
@@ -175,14 +173,14 @@ export const StayMultipleSelectedHighlightedArea = () => (
           This example is similar to <span className="tag">Stay Selected Highlighted Area</span>{' '}
           section, the only additional feature is you can freeze{' '}
           <span className="tag">multiple</span> highlighted areas.
-        </p>
+        </p>,
       )
     }
   />
 );
 
 StayMultipleSelectedHighlightedArea.parameters = {
-  code: stayMultipleSelectedHighlightedArea,
+  code: stayMultipleSelectedHighlightedAreaCode,
 };
 
 // 7 => ClearSelectedHighlightedArea
@@ -202,18 +200,18 @@ export const ClearSelectedHighlightedArea = () => (
           <button type="button" onClick={resetAreas}>
             Clear
           </button>
-        </p>
+        </p>,
       )
     }
   />
 );
 
 ClearSelectedHighlightedArea.parameters = {
-  code: clearSelectedHighlightedArea,
+  code: clearSelectedHighlightedAreaCode,
 };
 
 // 8 => ToggleStayHighlightedArea
-export const ToggleStayHighlightedArea = args => (
+export const ToggleStayHighlightedArea = (args) => (
   <Mapper
     isOnChangeNeeded
     isMulti={args.isMulti}
@@ -225,14 +223,14 @@ export const ToggleStayHighlightedArea = args => (
           In this example, a new feature of <span className="tag">toggle</span> property is added
           which will be used to <span className="tag">toggle</span> freezed highlighted area.
           <br />
-        </p>
+        </p>,
       )
     }
   />
 );
 
 ToggleStayHighlightedArea.parameters = {
-  code: toggleStayHighlightedArea,
+  code: toggleStayHighlightedAreaCode,
 };
 
 ToggleStayHighlightedArea.args = {
@@ -246,12 +244,12 @@ ToggleStayHighlightedArea.argTypes = {
 };
 
 // 9 => ZoomInZoomOutArea
-export const ZoomInZoomOutArea = args => {
+export const ZoomInZoomOutArea = (args) => {
   const minWidth = 400;
   const [zoom, setZoom] = useState(640);
 
-  const handleZoom = type => {
-    setZoom(prev => {
+  const handleZoom = (type) => {
+    setZoom((prev) => {
       if (prev <= minWidth && type === 'out') return prev;
       return type === 'in' ? prev + args.zoomWidth : prev - args.zoomWidth;
     });
@@ -276,7 +274,7 @@ export const ZoomInZoomOutArea = args => {
             <button type="button" onClick={() => handleZoom('out')}>
               Zoom Out
             </button>
-          </p>
+          </p>,
         )
       }
     />
@@ -284,7 +282,7 @@ export const ZoomInZoomOutArea = args => {
 };
 
 ZoomInZoomOutArea.parameters = {
-  code: zoomInZoomOutArea,
+  code: zoomInZoomOutAreaCode,
 };
 
 ZoomInZoomOutArea.args = {

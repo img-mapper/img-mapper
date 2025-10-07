@@ -1,16 +1,13 @@
 import React from 'react';
-import DynamicMapper from './components/DynamicMapper';
-import { dynamicAllProperties } from './codes/dynamic';
+import DynamicMapper from '@/components/DynamicMapper';
+import { dynamicAllPropertiesCode } from '@/code/dynamic';
 
 const Dynamic = {
   title: 'Examples/Dynamic All Properties',
   component: DynamicMapper,
-  parameters: {
-    controls: { hideNoControlsWarning: true },
-  },
 };
 
-export const DynamicAllProperties = args => <DynamicMapper {...args} />;
+export const DynamicAllProperties = (args) => <DynamicMapper {...args} />;
 
 DynamicAllProperties.argTypes = {
   isMulti: { control: 'boolean' },
@@ -45,7 +42,7 @@ DynamicAllProperties.args = {
 };
 
 DynamicAllProperties.parameters = {
-  code: dynamicAllProperties,
+  code: dynamicAllPropertiesCode,
 };
 
 export default Dynamic;

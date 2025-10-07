@@ -1,6 +1,6 @@
-import common from './common';
+import mapper from '@/functions/mapper';
 
-export const nonResponsiveDimensions = common(`(
+export const nonResponsiveDimensionsCode = mapper(`(
     <ImageMapper 
       src={url} 
       name={name}
@@ -12,7 +12,7 @@ export const nonResponsiveDimensions = common(`(
    />
   )`);
 
-export const responsiveDimensions = common(`(
+export const responsiveDimensionsCode = mapper(`(
     <ImageMapper 
       src={url} 
       name={name}
@@ -22,7 +22,7 @@ export const responsiveDimensions = common(`(
    />
   )`);
 
-export const allDimensions = common(`(
+export const allDimensionsCode = mapper(`(
     <ImageMapper 
       src={url} 
       name={name}

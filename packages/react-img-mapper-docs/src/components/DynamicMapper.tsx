@@ -1,23 +1,32 @@
-import React, { Fragment, useState } from 'react';
+import CONSTANTS from '@/constants';
+import { useAreas } from '@/hooks/useAreas';
+import React, { Fragment, useEffect, useRef, useState } from 'react';
 import ImageMapper from 'react-img-mapper';
-import url from '../../assets/example.jpg';
-import areasJSON from '../../assets/example.json';
 
-const getAreas = () =>
-  areasJSON.map(cur => {
-    const temp = { ...cur };
+const { url, name } = CONSTANTS;
 
-    if (['Front Wall', 'Window'].includes(cur.title)) {
-      delete temp.fillColor;
-      delete temp.strokeColor;
-      return temp;
+const DynamicMapper = (props) => {
+  const { areas: initialAreas } = useAreas();
+
+  const [areas, setAreas] = useState(initialAreas);
+
+  useEffect(() => {
+    if (!areas.length) {
+      setAreas(
+        areas.map((cur) => {
+          const temp = { ...cur };
+
+          if (['Front Wall', 'Window'].includes(cur.title)) {
+            delete temp.fillColor;
+            delete temp.strokeColor;
+            return temp;
+          }
+
+          return temp;
+        }),
+      );
     }
-
-    return temp;
-  });
-
-const DynamicMapper = props => {
-  const [areas, setAreas] = useState(getAreas);
+  }, [areas.length]);
 
   return (
     <Fragment>
@@ -36,8 +45,8 @@ const DynamicMapper = props => {
       </div>
       <ImageMapper
         src={url}
-        name="my-map"
-        areas={areas}
+        name={name}
+        areas={[]}
         onChange={(_, newAreas) => setAreas(newAreas)}
         {...props}
       />

@@ -1,14 +1,38 @@
-import React, { Fragment, useState } from 'react';
-import ImageMapper from 'react-img-mapper';
-import url from '../../assets/example.jpg';
-import areasJSON from '../../assets/example.json';
+import CONSTANTS from '@/constants';
+import { useAreas } from '@/hooks/useAreas';
+import { Component } from '@/types';
+import { Fragment, ReactNode, useCallback, useEffect, useState } from 'react';
+import ImageMapper, { ImageMapperProps } from 'react-img-mapper';
 
-const Mapper = props => {
-  const { customJSON, customType, isOnChangeNeeded, TopComponent, BottomComponent } = props;
+type TopComponentProps = {
+  resetAreas: () => void;
+};
 
-  const getJSON = () => {
+type BottomComponentProps = {
+  resetAreas: () => void;
+};
+
+type MapperProps = Omit<ImageMapperProps, 'src' | 'name' | 'areas' | 'onChange'> & {
+  customJSON?: 0 | 1 | 2;
+  customType?: 'fill' | 'stroke' | 'active' | 'disabled';
+  isOnChangeNeeded?: boolean;
+  TopComponent?: (props: TopComponentProps) => ReactNode;
+  BottomComponent?: (props: BottomComponentProps) => ReactNode;
+};
+
+const { url, name } = CONSTANTS;
+
+const Mapper: Component<MapperProps> = (props) => {
+  const { customJSON, customType, isOnChangeNeeded, TopComponent, BottomComponent, ...restProps } =
+    props;
+
+  const { areas: initialAreas } = useAreas();
+
+  const [areas, setAreas] = useState(initialAreas);
+
+  const getJSON = useCallback(() => {
     if (customJSON === 0) {
-      return areasJSON.map(cur => {
+      return initialAreas.map((cur) => {
         const temp = { ...cur };
 
         if (customType === 'fill') {
@@ -25,7 +49,7 @@ const Mapper = props => {
     }
 
     if (customJSON === 1) {
-      return areasJSON.map(cur => {
+      return initialAreas.map((cur) => {
         const temp = { ...cur };
 
         if (['Front Wall', 'Window'].includes(cur.title)) {
@@ -45,7 +69,7 @@ const Mapper = props => {
     }
 
     if (customJSON === 2) {
-      return areasJSON.map(cur => {
+      return initialAreas.map((cur) => {
         const temp = { ...cur };
 
         if (['Refrigerator', 'Window'].includes(cur.title)) {
@@ -64,22 +88,25 @@ const Mapper = props => {
       });
     }
 
-    return areasJSON;
-  };
-
-  const [areas, setAreas] = useState(getJSON);
+    return initialAreas;
+  }, [initialAreas, customJSON, customType]);
 
   const resetAreas = () => setAreas(getJSON());
+
+  useEffect(() => {
+    if (!areas.length) setAreas(getJSON());
+  }, [areas.length, getJSON]);
 
   return (
     <Fragment>
       {TopComponent && <TopComponent resetAreas={resetAreas} />}
       <ImageMapper
+        ref={null}
+        {...restProps}
         src={url}
-        name="my-map"
+        name={name}
         areas={areas}
         onChange={(_, areas) => (isOnChangeNeeded ? setAreas(areas) : null)}
-        {...props}
       />
       {BottomComponent && <BottomComponent resetAreas={resetAreas} />}
     </Fragment>
