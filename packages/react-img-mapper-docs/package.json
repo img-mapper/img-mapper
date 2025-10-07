@@ -15,9 +15,8 @@
   "type": "module",
   "scripts": {
     "build": "storybook build",
-    "predeploy": "pnpm build",
-    "deploy": "gh-pages -d storybook-static",
-    "dev": "storybook dev -p 3001"
+    "dev": "storybook dev -p 3001",
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "react": "catalog:",
