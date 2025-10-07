@@ -66,12 +66,10 @@ import React from 'react';
 import ImageMapper from 'react-img-mapper';
 
 const Mapper = () => {
-  const url =
-    'https://raw.githubusercontent.com/img-mapper/react-img-mapper/refs/heads/master/resources/example.jpg';
+  const url = 'https://react-img-mapper.nishargshah.dev/assets/example.jpg';
   const name = 'my-map';
   // GET JSON FROM BELOW URL AS AN EXAMPLE AND PUT IT HERE
-  const areas =
-    'https://raw.githubusercontent.com/img-mapper/react-img-mapper/refs/heads/master/resources/areas.json';
+  const areas = 'https://react-img-mapper.nishargshah.dev/assets/areas.json';
 
   return <ImageMapper src={url} name={name} areas={areas} />;
 };
