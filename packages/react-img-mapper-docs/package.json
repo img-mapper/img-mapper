@@ -21,7 +21,7 @@
   "dependencies": {
     "react": "catalog:",
     "react-dom": "catalog:",
-    "react-img-mapper": "^2.0.0",
+    "react-img-mapper": "workspace:*",
     "react-syntax-highlighter": "^15.6.6"
   },
   "devDependencies": {
