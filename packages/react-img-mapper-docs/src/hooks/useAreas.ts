@@ -1,10 +1,6 @@
 import CONSTANTS from '@/constants';
 import { useEffect, useState } from 'react';
-import { MapArea } from 'react-img-mapper';
-
-// interface OverrideMapArea {
-//   title: string;
-// }
+import type { MapArea } from 'react-img-mapper';
 
 interface AreasHookOutput {
   areas: MapArea[];
