@@ -11,8 +11,7 @@
     "resolveJsonModule": true,
     "useUnknownInCatchVariables": true,
     "isolatedModules": true,
-    "declaration": true,
-    "jsx": "react"
+    "declaration": true
   },
   "files": [],
   "references": [
