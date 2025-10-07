@@ -12,17 +12,19 @@ const meta = {
 type Story = StoryObj<typeof meta>;
 
 export const Simple: Story = {
-  args: {
-    TopComponent: () =>
-      TopComponent(
-        'Simple Example',
-        <p>Simple Example with default properties and required properties</p>,
-      ),
+  render: () => (
+    <Mapper
+      TopComponent={() =>
+        TopComponent(
+          'Simple Example',
+          <p>Simple Example with default properties and required properties</p>,
+        )
+      }
+    />
+  ),
+  parameters: {
+    code: simpleCode,
   },
-};
-
-Simple.parameters = {
-  code: simpleCode,
 };
 
 export default meta;

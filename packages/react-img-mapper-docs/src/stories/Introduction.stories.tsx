@@ -1,5 +1,6 @@
-const SimpleApp = {
+const meta = {
   title: 'Introduction',
+  tags: ['autodocs'],
 };
 
 export const Introduction = () => (
@@ -35,4 +36,4 @@ export const Introduction = () => (
   </div>
 );
 
-export default SimpleApp;
+export default meta;

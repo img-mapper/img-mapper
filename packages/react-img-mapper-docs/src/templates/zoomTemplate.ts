@@ -12,7 +12,7 @@ const Mapper = props => {
   const handleZoom = type => {
     setZoom(prev => {
       if (prev <= minWidth && type === 'out') return prev;
-      return type === 'in' ? prev + props.zoomWidth : prev - props.zoomWidth;
+      return type === 'in' ? prev + props.parentWidth : prev - props.parentWidth;
     });
   };
   

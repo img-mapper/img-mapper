@@ -1,7 +1,11 @@
-const TopComponent = (title, Content) => (
+import { ReactNode } from 'react';
+
+type TopComponentElement = (title: string, content: ReactNode) => ReactNode;
+
+const TopComponent: TopComponentElement = (title, content) => (
   <div className="top_container">
     <h1 className="title">{title}</h1>
-    <div className="top_content">{Content}</div>
+    <div className="top_content">{content}</div>
   </div>
 );
 
