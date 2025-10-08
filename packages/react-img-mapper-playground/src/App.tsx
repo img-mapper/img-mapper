@@ -58,7 +58,7 @@ const App: FC = () => {
       <input
         type="range"
         value={parentWidth}
-        onChange={e => setParentWidth(e.target.valueAsNumber)}
+        onChange={(e) => setParentWidth(e.target.valueAsNumber)}
         min={100}
         step={40}
         max={1000}
@@ -69,7 +69,7 @@ const App: FC = () => {
       <button type="button" onClick={() => setAreas(JSON)}>
         Clear
       </button>
-      <button type="button" onClick={() => setNatural(prev => !prev)}>
+      <button type="button" onClick={() => setNatural((prev) => !prev)}>
         natural
       </button>
       <button type="button" onClick={() => console.log(ref.current?.getRefs())}>

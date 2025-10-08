@@ -28,8 +28,8 @@ const styles: StylesProps = {
     pointerEvents: 'none',
     zIndex: 2,
   },
-  img: responsive => (responsive ? imgResponsive : imgNonResponsive),
-  map: onClick => (onClick ? { cursor: 'pointer' } : undefined),
+  img: (responsive) => (responsive ? imgResponsive : imgNonResponsive),
+  map: (onClick) => (onClick ? { cursor: 'pointer' } : undefined),
 };
 
 export default styles;

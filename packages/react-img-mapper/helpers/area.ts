@@ -8,9 +8,9 @@ import type {
 
 const scaleCoords: ScaleCoords = (
   coords,
-  { width, height, img, responsive, parentWidth, imgWidth }
+  { width, height, img, responsive, parentWidth, imgWidth },
 ) =>
-  coords.map(coord => {
+  coords.map((coord) => {
     if (responsive && parentWidth && img.current) {
       return coord / (img.current.naturalWidth / parentWidth);
     }
@@ -30,7 +30,7 @@ const computeCenter: ComputeCenter = (shape, scaledCoords) => {
       const n = scaledCoords.length / 2;
       const { y: scaleY, x: scaleX } = scaledCoords.reduce(
         ({ y, x }, val, idx) => (!(idx % 2) ? { y, x: x + val / n } : { y: y + val / n, x }),
-        { y: 0, x: 0 }
+        { y: 0, x: 0 },
       );
       return [scaleX, scaleY];
     }
@@ -40,7 +40,7 @@ const computeCenter: ComputeCenter = (shape, scaledCoords) => {
 export const getExtendedArea: GetExtendedArea = (
   area,
   scaleCoordsParams,
-  { fillColor, lineWidth, strokeColor }
+  { fillColor, lineWidth, strokeColor },
 ) => {
   const scaledCoords = scaleCoords(area.coords, scaleCoordsParams);
   const center = computeCenter(area.shape, scaledCoords);

@@ -23,7 +23,7 @@ type GetDimensionValuesParams = GetPropDimensionParams &
 
 export type GetDimensionValues = (
   type: 'width' | 'height',
-  params: GetDimensionValuesParams
+  params: GetDimensionValuesParams,
 ) => number;
 
 type GetDimensionsParams = Omit<GetDimensionValuesParams, 'type'>;

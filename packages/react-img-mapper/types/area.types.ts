@@ -6,12 +6,12 @@ type ScaleCoordsParams = GetPropDimensionParams &
 
 export type ScaleCoords = (
   coords: MapArea['coords'],
-  scaleCoordsParams: ScaleCoordsParams
+  scaleCoordsParams: ScaleCoordsParams,
 ) => number[];
 
 export type ComputeCenter = (
   shape: MapArea['shape'],
-  scaleCoordsParams: ReturnType<ScaleCoords>
+  scaleCoordsParams: ReturnType<ScaleCoords>,
 ) => Area['center'];
 
 type GetExtendedAreaParams = Pick<
@@ -22,5 +22,5 @@ type GetExtendedAreaParams = Pick<
 export type GetExtendedArea = (
   area: MapArea,
   scaleCoordsParams: ScaleCoordsParams,
-  params: GetExtendedAreaParams
+  params: GetExtendedAreaParams,
 ) => Area;

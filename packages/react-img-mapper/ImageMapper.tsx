@@ -10,14 +10,10 @@ import React, {
 
 import isEqual from 'react-fast-compare';
 
-import { getExtendedArea } from 'packages/react-img-mapper/helpers/area';
-import { generateProps, rerenderPropsList } from 'packages/react-img-mapper/helpers/constants';
-import {
-  getDimension,
-  getDimensions,
-  getPropDimension,
-} from 'packages/react-img-mapper/helpers/dimensions';
-import drawShape from 'packages/react-img-mapper/helpers/draw';
+import { getExtendedArea } from '@/helpers/area';
+import { generateProps, rerenderPropsList } from '@/helpers/constants';
+import { getDimension, getDimensions, getPropDimension } from '@/helpers/dimensions';
+import drawShape from '@/helpers/draw';
 import {
   click,
   imageClick,
@@ -29,15 +25,15 @@ import {
   mouseUp,
   touchEnd,
   touchStart,
-} from 'packages/react-img-mapper/helpers/events';
-import styles from 'packages/react-img-mapper/helpers/styles';
+} from '@/helpers/events';
+import styles from '@/helpers/styles';
 
-import type { ImageMapperPropsWithRef, MapArea, Refs } from 'packages/react-img-mapper/types';
-import type { PrevStateRef } from 'packages/react-img-mapper/types/dimensions.type';
-import type { CTX } from 'packages/react-img-mapper/types/draw.type';
+import type { ImageMapperPropsWithRef, MapArea, Refs } from '@/types';
+import type { PrevStateRef } from '@/types/dimensions.type';
+import type { CTX } from '@/types/draw.type';
 import type { FC, ReactNode } from 'react';
 
-export type * from 'packages/react-img-mapper/types';
+export type * from '@/types';
 
 const ImageMapper: FC<ImageMapperPropsWithRef> = ({ ref, ...props }) => {
   const generatedProps = generateProps(props);
@@ -87,22 +83,22 @@ const ImageMapper: FC<ImageMapperPropsWithRef> = ({ ref, ...props }) => {
   const ctx = useRef<CTX<null>['current']>(null);
   const interval = useRef<number>(0);
   const prevState = useRef<PrevStateRef>(
-    (() => ({ parentWidth, ...getPropDimension({ width, height, img }) }))()
+    (() => ({ parentWidth, ...getPropDimension({ width, height, img }) }))(),
   );
 
   const dimensionParams = useMemo(
     () => ({ width, height, responsive, parentWidth, natural }),
-    [width, height, responsive, parentWidth, natural]
+    [width, height, responsive, parentWidth, natural],
   );
 
   const scaleCoordsParams = useMemo(
     () => ({ width, height, responsive, parentWidth, imgWidth }),
-    [width, height, responsive, parentWidth, imgWidth]
+    [width, height, responsive, parentWidth, imgWidth],
   );
 
   const areaParams = useMemo(
     () => ({ fillColor, lineWidth, strokeColor }),
-    [fillColor, lineWidth, strokeColor]
+    [fillColor, lineWidth, strokeColor],
   );
 
   const init = useCallback(() => {
@@ -122,7 +118,7 @@ const ImageMapper: FC<ImageMapperPropsWithRef> = ({ ref, ...props }) => {
   }, [init, isRendered]);
 
   const renderPrefilledAreas = useCallback(() => {
-    areas.forEach(area => {
+    areas.forEach((area) => {
       const extendedArea = getExtendedArea(area, { img, ...scaleCoordsParams }, areaParams);
 
       if (!extendedArea.preFillColor) return false;
@@ -155,7 +151,7 @@ const ImageMapper: FC<ImageMapperPropsWithRef> = ({ ref, ...props }) => {
 
     const chosenArea = isMulti
       ? area
-      : chosenAreasRef.find(c => c[areaKeyName] === area[areaKeyName]);
+      : chosenAreasRef.find((c) => c[areaKeyName] === area[areaKeyName]);
 
     if (!chosenArea) return;
 
@@ -175,14 +171,14 @@ const ImageMapper: FC<ImageMapperPropsWithRef> = ({ ref, ...props }) => {
     })();
 
     if (isCurrentAreaSelected) {
-      const isPreFillColorFromJSON = chosenAreas.find(c => c[areaKeyName] === area[areaKeyName]);
+      const isPreFillColorFromJSON = chosenAreas.find((c) => c[areaKeyName] === area[areaKeyName]);
       if (isPreFillColorFromJSON?.preFillColor) delete newArea.preFillColor;
     } else {
       newArea.preFillColor = extendedArea.fillColor;
     }
 
-    const updatedAreas = chosenAreas.map(cur =>
-      cur[areaKeyName] === area[areaKeyName] ? newArea : cur
+    const updatedAreas = chosenAreas.map((cur) =>
+      cur[areaKeyName] === area[areaKeyName] ? newArea : cur,
     );
 
     if (onChange) onChange(newArea, updatedAreas);
@@ -213,12 +209,12 @@ const ImageMapper: FC<ImageMapperPropsWithRef> = ({ ref, ...props }) => {
         onLoad(img.current, { width: imageWidth, height: imageHeight });
       }
     },
-    [dimensionParams, onLoad, renderPrefilledAreas]
+    [dimensionParams, onLoad, renderPrefilledAreas],
   );
 
   const getRefs = useCallback(
     () => ({ containerRef: containerRef.current, imgRef: img.current, canvasRef: canvas.current }),
-    []
+    [],
   );
 
   useEffect(() => {
@@ -273,7 +269,7 @@ const ImageMapper: FC<ImageMapperPropsWithRef> = ({ ref, ...props }) => {
       const currentAreaProps = (() => {
         if (Array.isArray(areaProps)) {
           if (areaKeyNameProp) {
-            return areaProps.find(cur => cur && cur[areaKeyNameProp] === area[areaKeyNameProp]);
+            return areaProps.find((cur) => cur && cur[areaKeyNameProp] === area[areaKeyNameProp]);
           }
 
           return areaProps[index];
@@ -322,7 +318,7 @@ const ImageMapper: FC<ImageMapperPropsWithRef> = ({ ref, ...props }) => {
         src={src}
         useMap={`#${name}`}
         className={['img-mapper-img', ...(imgProps?.className ? [imgProps.className] : [])].join(
-          ' '
+          ' ',
         )}
         style={{
           ...imgProps?.style,
@@ -344,7 +340,7 @@ const ImageMapper: FC<ImageMapperPropsWithRef> = ({ ref, ...props }) => {
       <map
         {...mapProps}
         className={['img-mapper-map', ...(mapProps?.className ? [mapProps.className] : [])].join(
-          ' '
+          ' ',
         )}
         name={name}
         style={{ ...mapProps?.style, ...styles.map(onClick) }}
@@ -356,7 +352,7 @@ const ImageMapper: FC<ImageMapperPropsWithRef> = ({ ref, ...props }) => {
 };
 
 export default memo(ImageMapper, (prevProps, nextProps) => {
-  const propChanged = rerenderPropsList.some(prop => prevProps[prop] !== nextProps[prop]);
+  const propChanged = rerenderPropsList.some((prop) => prevProps[prop] !== nextProps[prop]);
 
   return isEqual(prevProps.areas, nextProps.areas) && !propChanged;
 });

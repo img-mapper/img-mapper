@@ -52,7 +52,7 @@ const drawPoly: DrawChosenShape = (area, ctx) => {
   return true;
 };
 
-const getShape: GetShape = shape => {
+const getShape: GetShape = (shape) => {
   if (shape === 'rect') return drawRect;
   if (shape === 'circle') return drawCircle;
   if (shape === 'poly') return drawPoly;

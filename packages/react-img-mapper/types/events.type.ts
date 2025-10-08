@@ -16,9 +16,9 @@ export type EventListenerProps<T extends keyof ImageMapperProps> = Pick<ImageMap
 
 export type EventListener<T extends keyof ImageMapperProps, E = AreaEvent> = (
   params: EventListenerParam,
-  props: EventListenerProps<T>
+  props: EventListenerProps<T>,
 ) => (event: E) => void;
 
 export type ImageEventListener<T extends keyof ImageMapperProps> = (
-  props: EventListenerProps<T>
+  props: EventListenerProps<T>,
 ) => (event: ImageEvent) => void;

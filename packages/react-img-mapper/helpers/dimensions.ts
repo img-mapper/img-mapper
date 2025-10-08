@@ -18,7 +18,7 @@ export const getPropDimension: GetPropDimension = ({ width, height, img }) => ({
 
 const getDimensionValues: GetDimensionValues = (
   type,
-  { width, height, img, responsive, parentWidth, natural }
+  { width, height, img, responsive, parentWidth, natural },
 ) => {
   const { width: imageWidth, height: imageHeight } = getPropDimension({ width, height, img });
 
@@ -43,7 +43,7 @@ const getDimensionValues: GetDimensionValues = (
   return 0;
 };
 
-export const getDimensions: GetDimensions = props => ({
+export const getDimensions: GetDimensions = (props) => ({
   width: getDimensionValues('width', props),
   height: getDimensionValues('height', props),
 });
