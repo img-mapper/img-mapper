@@ -1,10 +1,6 @@
-import { getPropDimension } from 'packages/react-img-mapper/helpers/dimensions';
+import { getPropDimension } from '@/helpers/dimensions';
 
-import type {
-  ComputeCenter,
-  GetExtendedArea,
-  ScaleCoords,
-} from 'packages/react-img-mapper/types/area.types';
+import type { ComputeCenter, GetExtendedArea, ScaleCoords } from '@/types/area.types';
 
 const scaleCoords: ScaleCoords = (
   coords,

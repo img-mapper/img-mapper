@@ -1,4 +1,4 @@
-import type { StylesProps } from 'packages/react-img-mapper/types/styles.type';
+import type { StylesProps } from '@/types/styles.type';
 import type { CSSProperties } from 'react';
 
 const absPos: CSSProperties = {

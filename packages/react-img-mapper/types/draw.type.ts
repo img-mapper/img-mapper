@@ -1,4 +1,4 @@
-import type { Area } from 'packages/react-img-mapper/types';
+import type { Area } from '@/types';
 import type { MutableRefObject } from 'react';
 
 export type CTX<E = CanvasRenderingContext2D> = MutableRefObject<CanvasRenderingContext2D | E>;

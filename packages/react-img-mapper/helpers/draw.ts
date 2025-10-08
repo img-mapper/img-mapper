@@ -1,8 +1,4 @@
-import type {
-  DrawChosenShape,
-  DrawShape,
-  GetShape,
-} from 'packages/react-img-mapper/types/draw.type';
+import type { DrawChosenShape, DrawShape, GetShape } from '@/types/draw.type';
 
 const drawRect: DrawChosenShape = (area, ctx) => {
   const { scaledCoords, fillColor, lineWidth, strokeColor } = area;

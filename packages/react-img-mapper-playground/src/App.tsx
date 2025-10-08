@@ -1,13 +1,13 @@
 import React, { useEffect, useRef, useState } from 'react';
 
 // eslint-disable-next-line import/no-extraneous-dependencies
-import ImageMapper from 'packages/react-img-mapper/ImageMapper';
+import ImageMapper from 'react-img-mapper';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import JSON from '@resources/areas.json';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import example from '@resources/example.jpg';
 
-import type { MapArea, RefProperties } from 'packages/react-img-mapper/ImageMapper';
+import type { MapArea, RefProperties } from 'react-img-mapper';
 import type { FC } from 'react';
 
 const App: FC = () => {

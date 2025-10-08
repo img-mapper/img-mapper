@@ -1,9 +1,4 @@
-import type {
-  AreaEvent,
-  ImageEvent,
-  ImageMapperProps,
-  MapArea,
-} from 'packages/react-img-mapper/types';
+import type { AreaEvent, ImageEvent, ImageMapperProps, MapArea } from '@/types';
 
 export interface EventListenerParam {
   area: MapArea;

@@ -1,4 +1,4 @@
-import type { ConditionalKeys, NoUndefinedField } from 'packages/react-img-mapper/types/lib.type';
+import type { ConditionalKeys, NoUndefinedField } from '@/types/lib.type';
 import type { HTMLProps, MouseEvent, TouchEvent as ReactTouchEvent, Ref } from 'react';
 
 export interface Refs {
