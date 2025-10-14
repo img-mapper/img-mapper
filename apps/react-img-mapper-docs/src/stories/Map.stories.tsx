@@ -1,11 +1,12 @@
-import Mapper from '@/components/Mapper';
-import TopComponent from '@/components/TopComponent';
 import {
+  allDimensionsCode,
   nonResponsiveDimensionsCode,
   responsiveDimensionsCode,
-  allDimensionsCode,
 } from '@/code/map';
-import { Meta, StoryObj } from '@storybook/react-vite';
+import Mapper from '@/components/Mapper';
+import TopComponent from '@/components/TopComponent';
+
+import type { Meta, StoryObj } from '@storybook/react-vite';
 
 const meta = {
   title: 'Examples/Responsive Map',
@@ -21,11 +22,11 @@ export const NonResponsiveDimensions: Story = {
 
     return (
       <Mapper
-        width={width}
         height={height}
         imgWidth={imgWidth}
         natural={natural}
-        TopComponent={() =>
+        width={width}
+        TopComponent={async () =>
           TopComponent(
             'Non Responsive Dimensions Example',
             <p>
@@ -83,7 +84,7 @@ export const ResponsiveDimensions: Story = {
       <Mapper
         responsive
         parentWidth={parentWidth}
-        TopComponent={() =>
+        TopComponent={async () =>
           TopComponent(
             'Responsive Dimensions Example',
             <p>
@@ -95,11 +96,12 @@ export const ResponsiveDimensions: Story = {
               <br />
               <br />
               By applying different values in <span className="tag">parentWidth</span> field, you
-              will think, it's already responsive, lets copy the code and see the results, kudos!!
+              will think, it&apos;s already responsive, lets copy the code and see the results,
+              kudos!!
               <br />
               <br />
               <span className="block">
-                Note: All the properties description and what it does it's available in{' '}
+                Note: All the properties description and what it does it&apos;s available in{' '}
                 <span className="tag">react img mapper</span> Github repo.
               </span>
             </p>,
@@ -127,17 +129,17 @@ export const AllDimensions: Story = {
 
     return (
       <Mapper
-        width={width}
         height={height}
         imgWidth={imgWidth}
         natural={natural}
-        responsive={responsive}
         parentWidth={parentWidth}
-        TopComponent={() =>
+        responsive={responsive}
+        width={width}
+        TopComponent={async () =>
           TopComponent(
             'All Dimensions Example',
             <p>
-              All the fields description and what they do it's available in the{' '}
+              All the fields description and what they do it&apos;s available in the{' '}
               <span className="tag">react img mapper</span> GitHub repository.
               <br />
               <br />
@@ -149,7 +151,7 @@ export const AllDimensions: Story = {
               change it and see the <span className="tag">live</span> results in the image mapper
               <br />
               <br />
-              It's is a mixture of all responsive & non-responsive properties, have fun.
+              It&apos;s is a mixture of all responsive & non-responsive properties, have fun.
             </p>,
           )
         }

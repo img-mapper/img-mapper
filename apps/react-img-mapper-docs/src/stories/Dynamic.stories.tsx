@@ -1,6 +1,7 @@
+import dynamicAllPropertiesCode from '@/code/dynamic';
 import DynamicMapper from '@/components/DynamicMapper';
-import { dynamicAllPropertiesCode } from '@/code/dynamic';
-import { Meta, StoryObj } from '@storybook/react-vite';
+
+import type { Meta, StoryObj } from '@storybook/react-vite';
 
 const meta = {
   title: 'Examples/Dynamic All Properties',

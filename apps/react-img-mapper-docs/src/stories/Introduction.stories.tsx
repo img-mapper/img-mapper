@@ -1,9 +1,11 @@
+import type { Component } from '@/types';
+
 const meta = {
   title: 'Introduction',
   tags: ['autodocs'],
 };
 
-export const Introduction = () => (
+export const Introduction: Component = () => (
   <div>
     <h1>React Img Mapper</h1>
     <p>

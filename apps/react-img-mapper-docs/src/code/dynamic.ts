@@ -1,6 +1,6 @@
 import mapper from '@/functions/mapper';
 
-export const dynamicAllPropertiesCode = mapper(`(
+const dynamicAllPropertiesCode = mapper(`(
     <ImageMapper 
       src={url} 
       name={name}
@@ -20,3 +20,5 @@ export const dynamicAllPropertiesCode = mapper(`(
       parentWidth={props.parentWidth}
    />
   )`);
+
+export default dynamicAllPropertiesCode;

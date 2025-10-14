@@ -43,6 +43,7 @@
     "@types/react-dom": "catalog:",
     "react": "catalog:",
     "rimraf": "catalog:",
+    "tsc-alias": "^1.8.16",
     "typescript": "catalog:"
   },
   "peerDependencies": {

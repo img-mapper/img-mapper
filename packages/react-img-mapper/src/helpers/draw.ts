@@ -41,7 +41,7 @@ const drawPoly: DrawChosenShape = (area, ctx) => {
   ctx.current.strokeStyle = strokeColor;
 
   // ctx.current.moveTo(first[0], first[1]);
-  groupCoords.forEach(([first, second]) => ctx.current.lineTo(first, second));
+  for (const [first, second] of groupCoords) ctx.current.lineTo(first, second);
   ctx.current.closePath();
   ctx.current.stroke();
   ctx.current.fill();

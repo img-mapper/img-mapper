@@ -1,7 +1,7 @@
 import type {
   GetDimension,
-  GetDimensionValues,
   GetDimensions,
+  GetDimensionValues,
   GetPropDimension,
 } from '@/types/dimensions.type';
 

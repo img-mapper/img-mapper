@@ -1,7 +1,5 @@
 import mapper from '@/functions/mapper';
 import mapperWithState from '@/functions/mapperWithState';
-import clearButtonTemplate from '@/templates/clearButtonTemplate';
-import zoomTemplate from '@/templates/zoomTemplate';
 
 export const showHighlightedAreaCode = mapper(`(
     <ImageMapper 
@@ -51,8 +49,6 @@ export const stayMultipleSelectedHighlightedAreaCode = mapperWithState(`(
    />
   )`);
 
-export const clearSelectedHighlightedAreaCode = clearButtonTemplate;
-
 export const toggleStayHighlightedAreaCode = mapperWithState(`(
     <ImageMapper 
       src={url} 
@@ -64,4 +60,6 @@ export const toggleStayHighlightedAreaCode = mapperWithState(`(
    />
   )`);
 
-export const zoomInZoomOutAreaCode = zoomTemplate;
+export { default as clearSelectedHighlightedAreaCode } from '@/templates/clearButtonTemplate';
+
+export { default as zoomInZoomOutAreaCode } from '@/templates/zoomTemplate';

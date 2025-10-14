@@ -1,5 +1,7 @@
-import CONSTANTS from '@/constants';
 import { useEffect, useState } from 'react';
+
+import CONSTANTS from '@/constants';
+
 import type { MapArea } from 'react-img-mapper';
 
 interface AreasHookOutput {

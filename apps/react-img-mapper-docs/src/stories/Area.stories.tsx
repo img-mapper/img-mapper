@@ -1,19 +1,20 @@
 import { useState } from 'react';
-import Mapper from '@/components/Mapper';
 
-import TopComponent from '@/components/TopComponent';
 import {
-  showHighlightedAreaCode,
-  inArrayShowHighlightedAreaCode,
-  disabledAreaCode,
-  staySelectedHighlightedAreaCode,
-  stayMultipleSelectedHighlightedAreaCode,
-  toggleStayHighlightedAreaCode,
-  inArrayDisabledAreaCode,
   clearSelectedHighlightedAreaCode,
+  disabledAreaCode,
+  inArrayDisabledAreaCode,
+  inArrayShowHighlightedAreaCode,
+  showHighlightedAreaCode,
+  stayMultipleSelectedHighlightedAreaCode,
+  staySelectedHighlightedAreaCode,
+  toggleStayHighlightedAreaCode,
   zoomInZoomOutAreaCode,
 } from '@/code/areas';
-import { Meta, StoryObj } from '@storybook/react-vite';
+import Mapper from '@/components/Mapper';
+import TopComponent from '@/components/TopComponent';
+
+import type { Meta, StoryObj } from '@storybook/react-vite';
 
 const meta = {
   title: 'Examples/Area',
@@ -30,7 +31,7 @@ export const ShowHighlightedArea: Story = {
     return (
       <Mapper
         active={active}
-        TopComponent={() =>
+        TopComponent={async () =>
           TopComponent(
             'Show Highlighted Area Example',
             <p>
@@ -60,9 +61,9 @@ export const ShowHighlightedArea: Story = {
 export const InArrayShowHighlightedArea: Story = {
   render: () => (
     <Mapper
-      customType="active"
       customJSON={2}
-      TopComponent={() =>
+      customType="active"
+      TopComponent={async () =>
         TopComponent(
           'Show Highlighted Area Example Based on Area JSON',
           <p>
@@ -94,7 +95,7 @@ export const DisabledArea: Story = {
     return (
       <Mapper
         disabled={disabled}
-        TopComponent={() =>
+        TopComponent={async () =>
           TopComponent(
             'Disabled Area Example',
             <p>
@@ -125,9 +126,9 @@ export const DisabledArea: Story = {
 export const InArrayDisabledArea: Story = {
   render: () => (
     <Mapper
-      customType="disabled"
       customJSON={2}
-      TopComponent={() =>
+      customType="disabled"
+      TopComponent={async () =>
         TopComponent(
           'Disabled Area Example Based on Area JSON',
           <p>
@@ -156,7 +157,7 @@ export const StaySelectedHighlightedArea: Story = {
     <Mapper
       isOnChangeNeeded
       isMulti={false}
-      TopComponent={() =>
+      TopComponent={async () =>
         TopComponent(
           'Stay Selected Highlighted Area Example',
           <p>
@@ -177,9 +178,9 @@ export const StaySelectedHighlightedArea: Story = {
 export const StayMultipleSelectedHighlightedArea: Story = {
   render: () => (
     <Mapper
-      isOnChangeNeeded
       isMulti
-      TopComponent={() =>
+      isOnChangeNeeded
+      TopComponent={async () =>
         TopComponent(
           'Stay Multiple Selected Highlighted Area Example',
           <p>
@@ -199,9 +200,9 @@ export const StayMultipleSelectedHighlightedArea: Story = {
 export const ClearSelectedHighlightedArea: Story = {
   render: () => (
     <Mapper
-      isOnChangeNeeded
       isMulti
-      TopComponent={({ resetAreas }) =>
+      isOnChangeNeeded
+      TopComponent={async ({ resetAreas }) =>
         TopComponent(
           'Clear Selected Highlighted Area Example',
           <p>
@@ -210,7 +211,7 @@ export const ClearSelectedHighlightedArea: Story = {
             <span className="tag">live</span> results in image mapper
             <br />
             <br />
-            <button type="button" onClick={resetAreas}>
+            <button onClick={resetAreas} type="button">
               Clear
             </button>
           </p>,
@@ -232,7 +233,7 @@ export const ToggleStayHighlightedArea: Story = {
         isOnChangeNeeded
         isMulti={isMulti}
         toggle={toggle}
-        TopComponent={() =>
+        TopComponent={async () =>
           TopComponent(
             'Toggle Stay Highlighted Area Example',
             <p>
@@ -281,7 +282,7 @@ export const ZoomInZoomOutArea: Story = {
       <Mapper
         responsive
         parentWidth={zoom}
-        TopComponent={() =>
+        TopComponent={async () =>
           TopComponent(
             'Zoom In & Zoom Out Area',
             <p>
@@ -290,10 +291,10 @@ export const ZoomInZoomOutArea: Story = {
               below buttons to see the <span className="tag">live</span> results in image mapper
               <br />
               <br />
-              <button style={{ marginRight: 8 }} type="button" onClick={() => handleZoom('in')}>
+              <button onClick={() => handleZoom('in')} style={{ marginRight: 8 }} type="button">
                 Zoom In
               </button>
-              <button type="button" onClick={() => handleZoom('out')}>
+              <button onClick={() => handleZoom('out')} type="button">
                 Zoom Out
               </button>
             </p>,

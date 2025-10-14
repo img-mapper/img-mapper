@@ -1,14 +1,14 @@
 import React, { useEffect, useRef, useState } from 'react';
 
 // eslint-disable-next-line import/no-extraneous-dependencies
-import ImageMapper from 'react-img-mapper';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import JSON from '@resources/areas.json';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import example from '@resources/example.jpg';
+import ImageMapper from 'react-img-mapper';
 
-import type { MapArea, RefProperties } from 'react-img-mapper';
 import type { FC } from 'react';
+import type { MapArea, RefProperties } from 'react-img-mapper';
 
 const App: FC = () => {
   const [areas, setAreas] = useState<MapArea[]>(JSON);
@@ -36,14 +36,14 @@ const App: FC = () => {
     setAreas(area);
   };
 
-  if (!areas.length) return null;
+  if (areas.length === 0) return null;
 
   return (
     <React.Fragment>
       <ImageMapper
         ref={ref}
-        src={example}
         name="my-map"
+        src={example}
         areas={areas}
         // onChange={(selectedArea, allAreas) => {
         //   console.log(selectedArea, allAreas);
@@ -56,23 +56,23 @@ const App: FC = () => {
         // natural={natural}
       />
       <input
+        max={1000}
+        min={100}
+        onChange={(e) => setParentWidth(e.target.valueAsNumber)}
+        step={40}
         type="range"
         value={parentWidth}
-        onChange={(e) => setParentWidth(e.target.valueAsNumber)}
-        min={100}
-        step={40}
-        max={1000}
       />
-      <button type="button" onClick={handleClick}>
+      <button onClick={handleClick} type="button">
         Highlight
       </button>
-      <button type="button" onClick={() => setAreas(JSON)}>
+      <button onClick={() => setAreas(JSON)} type="button">
         Clear
       </button>
-      <button type="button" onClick={() => setNatural((prev) => !prev)}>
+      <button onClick={() => setNatural((prev) => !prev)} type="button">
         natural
       </button>
-      <button type="button" onClick={() => console.log(ref.current?.getRefs())}>
+      <button onClick={() => console.log(ref.current?.getRefs())} type="button">
         Get Ref
       </button>
     </React.Fragment>

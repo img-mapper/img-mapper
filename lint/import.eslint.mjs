@@ -14,6 +14,14 @@ const customImportESLintConfig = [
       'unused-imports/no-unused-imports': 'error',
     },
   },
+  // Disable Default Export for Hooks
+  {
+    name: 'x/import-x/disable-default-export',
+    files: ['**/use*.ts'],
+    rules: {
+      'import-x/prefer-default-export': 'off',
+    },
+  },
   // Disable Extensions in Module Files
   {
     name: 'x/import-x/disable-extensions-in-module-files',

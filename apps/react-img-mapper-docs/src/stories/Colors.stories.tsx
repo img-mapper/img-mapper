@@ -1,6 +1,3 @@
-import Mapper from '@/components/Mapper';
-
-import TopComponent from '@/components/TopComponent';
 import {
   dynamicFillColorCode,
   dynamicMixArrayFillColorCode,
@@ -11,7 +8,10 @@ import {
   inArrayStrokeColorCode,
   strokeColorCode,
 } from '@/code/colors';
-import { Meta, StoryObj } from '@storybook/react-vite';
+import Mapper from '@/components/Mapper';
+import TopComponent from '@/components/TopComponent';
+
+import type { Meta, StoryObj } from '@storybook/react-vite';
 
 const meta = {
   title: 'Examples/Colors',
@@ -24,15 +24,15 @@ type Story = StoryObj<typeof meta>;
 export const FillColor: Story = {
   render: () => (
     <Mapper
-      customType="fill"
       customJSON={0}
-      TopComponent={() =>
+      customType="fill"
+      TopComponent={async () =>
         TopComponent(
           'Default Fill Color Example',
           <p>
             In this example, the <span className="tag">fillColor</span> property is not available in{' '}
-            <span className="tag">areas</span> JSON, that's why it's giving the default behavior of
-            mapper by applying default <span className="tag">fillColor</span>.
+            <span className="tag">areas</span> JSON, that&apos;s why it&apos;s giving the default
+            behavior of mapper by applying default <span className="tag">fillColor</span>.
           </p>,
         )
       }
@@ -47,12 +47,12 @@ export const InArrayFillColor: Story = {
   render: () => (
     <Mapper
       customType="fill"
-      TopComponent={() =>
+      TopComponent={async () =>
         TopComponent(
           'Fill Color based on Area JSON Example',
           <p>
             In this example, the <span className="tag">fillColor</span> property is available in{' '}
-            <span className="tag">areas</span> JSON, that's why it's applying{' '}
+            <span className="tag">areas</span> JSON, that&apos;s why it&apos;s applying{' '}
             <span className="tag">fillColor</span> from JSON and we can see different{' '}
             <span className="tag">fillColor</span> for different <span className="tag">areas</span>.
           </p>,
@@ -71,10 +71,10 @@ export const DynamicFillColor: Story = {
 
     return (
       <Mapper
-        customType="fill"
         customJSON={0}
+        customType="fill"
         fillColor={fillColor}
-        TopComponent={() =>
+        TopComponent={async () =>
           TopComponent(
             'Dynamic Fill Color Example',
             <p>
@@ -111,10 +111,10 @@ export const DynamicMixArrayFillColor: Story = {
 
     return (
       <Mapper
-        customType="fill"
         customJSON={1}
+        customType="fill"
         fillColor={fillColor}
-        TopComponent={() =>
+        TopComponent={async () =>
           TopComponent(
             'Dynamic Mix Array Fill Color Example',
             <p>
@@ -152,16 +152,16 @@ export const DynamicMixArrayFillColor: Story = {
 export const StrokeColor: Story = {
   render: () => (
     <Mapper
-      customType="stroke"
       customJSON={0}
+      customType="stroke"
       lineWidth={2}
-      TopComponent={() =>
+      TopComponent={async () =>
         TopComponent(
           'Default Stroke Color Example',
           <p>
             In this example, the <span className="tag">strokeColor</span> property is not available
-            in <span className="tag">areas</span> JSON, that's why it's giving the default behavior
-            of mapper by applying default <span className="tag">strokeColor</span>.
+            in <span className="tag">areas</span> JSON, that&apos;s why it&apos;s giving the default
+            behavior of mapper by applying default <span className="tag">strokeColor</span>.
           </p>,
         )
       }
@@ -177,12 +177,12 @@ export const InArrayStrokeColor: Story = {
     <Mapper
       customType="stroke"
       lineWidth={2}
-      TopComponent={() =>
+      TopComponent={async () =>
         TopComponent(
           'Stroke Color based on Area JSON Example',
           <p>
             In this example, the <span className="tag">strokeColor</span> property is available in{' '}
-            <span className="tag">areas</span> JSON, that's why it's applying{' '}
+            <span className="tag">areas</span> JSON, that&apos;s why it&apos;s applying{' '}
             <span className="tag">strokeColor</span> from JSON.
           </p>,
         )
@@ -200,11 +200,11 @@ export const DynamicStrokeColor: Story = {
 
     return (
       <Mapper
-        customType="stroke"
         customJSON={0}
-        strokeColor={strokeColor}
+        customType="stroke"
         lineWidth={lineWidth}
-        TopComponent={() =>
+        strokeColor={strokeColor}
+        TopComponent={async () =>
           TopComponent(
             'Dynamic Stroke Color Example',
             <p>
@@ -243,11 +243,11 @@ export const DynamicMixArrayStrokeColor: Story = {
 
     return (
       <Mapper
-        customType="stroke"
         customJSON={1}
-        strokeColor={strokeColor}
+        customType="stroke"
         lineWidth={lineWidth}
-        TopComponent={() =>
+        strokeColor={strokeColor}
+        TopComponent={async () =>
           TopComponent(
             'Dynamic Mix Array Stroke Color Example',
             <p>

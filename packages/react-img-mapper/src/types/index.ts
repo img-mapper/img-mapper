@@ -1,5 +1,6 @@
+import type { HTMLProps, MouseEvent, Ref, TouchEvent as ReactTouchEvent } from 'react';
+
 import type { ConditionalKeys, NoUndefinedField } from '@/types/lib.type';
-import type { HTMLProps, MouseEvent, TouchEvent as ReactTouchEvent, Ref } from 'react';
 
 export interface Refs {
   containerRef: HTMLDivElement | null;
@@ -11,7 +12,7 @@ export interface RefProperties {
   getRefs: () => Refs;
 }
 
-// eslint-disable-next-line @typescript-eslint/no-empty-interface
+// eslint-disable-next-line @typescript-eslint/no-empty-object-type
 export interface OverrideMapArea {}
 
 export interface MapArea extends OverrideMapArea {

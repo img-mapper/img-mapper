@@ -28,10 +28,11 @@ import {
 } from '@/helpers/events';
 import styles from '@/helpers/styles';
 
+import type { FC, ReactNode } from 'react';
+
 import type { ImageMapperPropsWithRef, MapArea, Refs } from '@/types';
 import type { PrevStateRef } from '@/types/dimensions.type';
 import type { CTX } from '@/types/draw.type';
-import type { FC, ReactNode } from 'react';
 
 export type * from '@/types';
 
@@ -75,16 +76,17 @@ const ImageMapper: FC<ImageMapperPropsWithRef> = ({ ref, ...props }) => {
     onLoad,
   } = generatedProps;
 
-  const [isRendered, setRendered] = useState<boolean>(false);
+  const [isRendered, setIsRendered] = useState<boolean>(false);
   const areasRef = useRef<MapArea[]>(areas);
   const containerRef = useRef<Refs['containerRef']>(null);
   const img = useRef<Refs['imgRef']>(null);
   const canvas = useRef<Refs['canvasRef']>(null);
   const ctx = useRef<CTX<null>['current']>(null);
   const interval = useRef<number>(0);
-  const prevState = useRef<PrevStateRef>(
-    (() => ({ parentWidth, ...getPropDimension({ width, height, img }) }))(),
-  );
+  const prevState = useRef<PrevStateRef>({
+    parentWidth,
+    ...getPropDimension({ width, height, img }),
+  });
 
   const dimensionParams = useMemo(
     () => ({ width, height, responsive, parentWidth, natural }),
@@ -105,19 +107,21 @@ const ImageMapper: FC<ImageMapperPropsWithRef> = ({ ref, ...props }) => {
     if (img.current?.complete && canvas.current && containerRef.current) {
       ctx.current = canvas.current.getContext('2d');
 
-      setRendered(true);
+      setIsRendered(true);
     }
   }, []);
 
   useEffect(() => {
-    if (!isRendered) {
-      interval.current = window.setInterval(init, 500);
-    } else {
+    if (isRendered) {
       clearInterval(interval.current);
+    } else {
+      // eslint-disable-next-line unicorn/prefer-global-this
+      interval.current = window.setInterval(init, 500);
     }
   }, [init, isRendered]);
 
   const renderPrefilledAreas = useCallback(() => {
+    // eslint-disable-next-line unicorn/no-array-for-each
     areas.forEach((area) => {
       const extendedArea = getExtendedArea(area, { img, ...scaleCoordsParams }, areaParams);
 
@@ -282,23 +286,23 @@ const ImageMapper: FC<ImageMapperPropsWithRef> = ({ ref, ...props }) => {
         <area
           alt="map"
           {...currentAreaProps}
+          key={area[areaKeyName] ?? index.toString()}
+          coords={scaledCoords.join(',')}
+          href={href ?? currentAreaProps?.href}
+          onClick={click({ area, index }, { onClick, cb: handleClick })}
+          onMouseDown={mouseDown({ area, index }, { onMouseDown })}
+          onMouseEnter={mouseEnter({ area, index }, { onMouseEnter, cb: handleMouseEnter })}
+          onMouseLeave={mouseLeave({ area, index }, { onMouseLeave, cb: handleMouseLeave })}
+          onMouseMove={mouseMove({ area, index }, { onMouseMove })}
+          onMouseUp={mouseUp({ area, index }, { onMouseUp })}
+          onTouchEnd={touchEnd({ area, index }, { onTouchEnd })}
+          onTouchStart={touchStart({ area, index }, { onTouchStart })}
+          shape={shape ?? currentAreaProps?.shape}
           className={[
             'img-mapper-area',
             ...(preFillColor ? ['img-mapper-area-highlighted'] : []),
             ...(currentAreaProps?.className ? [currentAreaProps.className] : []),
           ].join(' ')}
-          key={area[areaKeyName] ?? index.toString()}
-          href={href ?? currentAreaProps?.href}
-          shape={shape ?? currentAreaProps?.shape}
-          coords={scaledCoords.join(',')}
-          onMouseEnter={mouseEnter({ area, index }, { onMouseEnter, cb: handleMouseEnter })}
-          onMouseLeave={mouseLeave({ area, index }, { onMouseLeave, cb: handleMouseLeave })}
-          onMouseMove={mouseMove({ area, index }, { onMouseMove })}
-          onMouseDown={mouseDown({ area, index }, { onMouseDown })}
-          onMouseUp={mouseUp({ area, index }, { onMouseUp })}
-          onTouchStart={touchStart({ area, index }, { onTouchStart })}
-          onTouchEnd={touchEnd({ area, index }, { onTouchEnd })}
-          onClick={click({ area, index }, { onClick, cb: handleClick })}
         />
       );
     });
@@ -311,10 +315,12 @@ const ImageMapper: FC<ImageMapperPropsWithRef> = ({ ref, ...props }) => {
       style={{ ...containerProps?.style, ...styles.container }}
     >
       <img
-        role="presentation"
         alt="map"
+        role="presentation"
         {...imgProps}
         ref={img}
+        onClick={imageClick({ onImageClick })}
+        onMouseMove={imageMouseMove({ onImageMouseMove })}
         src={src}
         useMap={`#${name}`}
         className={['img-mapper-img', ...(imgProps?.className ? [imgProps.className] : [])].join(
@@ -323,29 +329,27 @@ const ImageMapper: FC<ImageMapperPropsWithRef> = ({ ref, ...props }) => {
         style={{
           ...imgProps?.style,
           ...styles.img(responsive),
-          ...(!isRendered ? { display: 'none' } : null),
+          ...(isRendered ? null : { display: 'none' }),
         }}
-        onClick={imageClick({ onImageClick })}
-        onMouseMove={imageMouseMove({ onImageMouseMove })}
       />
       <canvas
         {...canvasProps}
         ref={canvas}
+        style={{ ...canvasProps?.style, ...styles.canvas }}
         className={[
           'img-mapper-canvas',
           ...(canvasProps?.className ? [canvasProps.className] : []),
         ].join(' ')}
-        style={{ ...canvasProps?.style, ...styles.canvas }}
       />
       <map
         {...mapProps}
+        name={name}
+        style={{ ...mapProps?.style, ...styles.map(!!onClick) }}
         className={['img-mapper-map', ...(mapProps?.className ? [mapProps.className] : [])].join(
           ' ',
         )}
-        name={name}
-        style={{ ...mapProps?.style, ...styles.map(onClick) }}
       >
-        {isRendered && !disabled && renderAreas()}
+        {isRendered && !disabled ? renderAreas() : null}
       </map>
     </div>
   );

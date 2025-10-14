@@ -1,16 +1,22 @@
+import { Fragment, useCallback, useEffect, useState } from 'react';
+
+import ImageMapper from 'react-img-mapper';
+
 import CONSTANTS from '@/constants';
 import { useAreas } from '@/hooks/useAreas';
-import { Component } from '@/types';
-import { Fragment, ReactNode, useCallback, useEffect, useState } from 'react';
-import ImageMapper, { ImageMapperProps } from 'react-img-mapper';
 
-type TopComponentProps = {
-  resetAreas: () => void;
-};
+import type { ReactNode } from 'react';
+import type { ImageMapperProps } from 'react-img-mapper';
 
-type BottomComponentProps = {
+import type { Component } from '@/types';
+
+interface TopComponentProps {
   resetAreas: () => void;
-};
+}
+
+interface BottomComponentProps {
+  resetAreas: () => void;
+}
 
 type MapperProps = Omit<ImageMapperProps, 'src' | 'name' | 'areas' | 'onChange'> & {
   customJSON?: 0 | 1 | 2;
@@ -94,21 +100,21 @@ const Mapper: Component<MapperProps> = (props) => {
   const resetAreas = () => setAreas(getJSON());
 
   useEffect(() => {
-    if (!areas.length) setAreas(getJSON());
+    if (areas.length === 0) setAreas(getJSON());
   }, [areas.length, getJSON]);
 
   return (
     <Fragment>
-      {TopComponent && <TopComponent resetAreas={resetAreas} />}
+      {TopComponent ? <TopComponent resetAreas={resetAreas} /> : null}
       <ImageMapper
         ref={null}
         {...restProps}
-        src={url}
-        name={name}
         areas={areas}
+        name={name}
         onChange={(_, areas) => (isOnChangeNeeded ? setAreas(areas) : null)}
+        src={url}
       />
-      {BottomComponent && <BottomComponent resetAreas={resetAreas} />}
+      {BottomComponent ? <BottomComponent resetAreas={resetAreas} /> : null}
     </Fragment>
   );
 };

@@ -18,6 +18,14 @@ const customReactESLintConfig = [
       'jsx-a11y/label-has-associated-control': 'off',
     },
   },
+  // Disable JSX Runtime rule
+  {
+    name: 'x/react/disable-jsx-runtime',
+    rules: {
+      'react/jsx-uses-react': 'off',
+      'react/react-in-jsx-scope': 'off',
+    },
+  },
 ];
 
 export default customReactESLintConfig;

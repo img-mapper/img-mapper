@@ -9,6 +9,14 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["**/*.ts", "**/*.tsx", "**/*.mjs", "**/*.mts", "**/*.d.ts"],
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    "**/*.mjs",
+    "**/*.mts",
+    "**/*.d.ts",
+    ".storybook/**/*.ts",
+    ".storybook/**/*.tsx"
+  ],
   "exclude": ["node_modules", "dist"]
 }

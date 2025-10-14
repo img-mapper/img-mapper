@@ -1,8 +1,13 @@
+import { Fragment, useEffect, useState } from 'react';
+
+import ImageMapper from 'react-img-mapper';
+
 import CONSTANTS from '@/constants';
 import { useAreas } from '@/hooks/useAreas';
-import { Component } from '@/types';
-import { Fragment, useEffect, useState } from 'react';
-import ImageMapper, { ImageMapperProps } from 'react-img-mapper';
+
+import type { ImageMapperProps } from 'react-img-mapper';
+
+import type { Component } from '@/types';
 
 const { url, name } = CONSTANTS;
 
@@ -14,7 +19,7 @@ const DynamicMapper: Component<DynamicMapperProps> = (props) => {
   const [areas, setAreas] = useState(initialAreas);
 
   useEffect(() => {
-    if (!areas.length) {
+    if (areas.length === 0) {
       setAreas(
         initialAreas.map((cur) => {
           const temp = { ...cur };
@@ -49,10 +54,10 @@ const DynamicMapper: Component<DynamicMapperProps> = (props) => {
       <ImageMapper
         {...props}
         ref={null}
-        src={url}
-        name={name}
         areas={areas}
+        name={name}
         onChange={(_, newAreas) => setAreas(newAreas)}
+        src={url}
       />
     </Fragment>
   );

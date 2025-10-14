@@ -1,5 +1,6 @@
-import type { Area } from '@/types';
 import type { RefObject } from 'react';
+
+import type { Area } from '@/types';
 
 export type CTX<E = CanvasRenderingContext2D> = RefObject<CanvasRenderingContext2D | E>;
 
