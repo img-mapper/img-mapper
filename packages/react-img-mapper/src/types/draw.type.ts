@@ -1,7 +1,7 @@
 import type { Area } from '@/types';
-import type { MutableRefObject } from 'react';
+import type { RefObject } from 'react';
 
-export type CTX<E = CanvasRenderingContext2D> = MutableRefObject<CanvasRenderingContext2D | E>;
+export type CTX<E = CanvasRenderingContext2D> = RefObject<CanvasRenderingContext2D | E>;
 
 type DrawArea = 'scaledCoords' | 'fillColor' | 'lineWidth' | 'strokeColor';
 

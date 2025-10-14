@@ -1,7 +1,7 @@
 import type { Dimension, ImageMapperProps, Refs, WidthHeight } from '@/types';
-import type { MutableRefObject } from 'react';
+import type { RefObject } from 'react';
 
-type ImgRef = MutableRefObject<Refs['imgRef']>;
+type ImgRef = RefObject<Refs['imgRef']>;
 
 export type GetDimension = (dimension: Dimension, img: ImgRef) => number;
 

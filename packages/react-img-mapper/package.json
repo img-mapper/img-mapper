@@ -27,8 +27,8 @@
   "license": "MIT",
   "author": "Nisharg Shah <nishargshah3101@gmail.com>",
   "type": "commonjs",
-  "main": "./dist/ImageMapper.js",
-  "types": "./dist/ImageMapper.d.ts",
+  "main": "./dist/src/ImageMapper.js",
+  "types": "./dist/src/ImageMapper.d.ts",
   "scripts": {
     "prebuild": "rimraf ./dist",
     "build": "tsc -b",
@@ -39,15 +39,15 @@
     "react-fast-compare": "^3.2.2"
   },
   "devDependencies": {
-    "@types/react": "^19.2.1",
-    "@types/react-dom": "^19.2.0",
+    "@types/react": "catalog:",
+    "@types/react-dom": "catalog:",
     "react": "catalog:",
     "rimraf": "catalog:",
     "typescript": "catalog:"
   },
   "peerDependencies": {
-    "react": "16.x || 17.x || 18.x || 19.x",
-    "react-dom": "16.x || 17.x || 18.x || 19.x"
+    "react": "^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0",
+    "react-dom": "^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0"
   },
   "engines": {
     "node": ">=16.0.0"
