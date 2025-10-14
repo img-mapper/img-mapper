@@ -16,10 +16,10 @@
   "files": [],
   "references": [
     {
-      "path": "packages/react-img-mapper"
+      "path": "apps/react-img-mapper-docs"
     },
     {
-      "path": "packages/react-img-mapper-docs"
+      "path": "packages/react-img-mapper"
     },
     {
       "path": "packages/react-img-mapper-playground"
