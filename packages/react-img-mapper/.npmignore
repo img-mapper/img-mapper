@@ -3,3 +3,6 @@
 
 # Not ignored folders
 !dist
+
+# Inside dist
+*.tsbuildinfo

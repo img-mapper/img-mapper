@@ -13,6 +13,7 @@
   "author": "Nisharg Shah <nishargshah3101@gmail.com>",
   "scripts": {
     "build": "pnpm -r build",
+    "build:react-img-mapper": "pnpm --filter react-img-mapper build",
     "clean:all": "pnpm clean:node_modules && pnpm clean:generated-folders",
     "clean:dist": "pnpx rimraf dist && pnpm -r exec pnpx rimraf dist",
     "clean:generated-folders": "pnpm clean:dist",
@@ -24,7 +25,7 @@
     "lint": "eslint .",
     "lint:fix": "pnpm --silent lint --fix",
     "pkg:prepare": "pnpm changeset && pnpm changeset version",
-    "pkg:publish": "pnpm -r build && pnpm changeset publish",
+    "pkg:publish": "pnpm build:react-img-mapper && pnpm changeset publish",
     "prepare": "husky || true",
     "script:lint": "bash -e ./scripts/lint.sh",
     "typecheck": "pnpm -r typecheck"

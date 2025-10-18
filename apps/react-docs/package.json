@@ -1,6 +1,7 @@
 {
   "name": "react-docs",
   "version": "2.0.1",
+  "private": true,
   "description": "Documentation of react-img-mapper",
   "bugs": {
     "url": "https://github.com/img-mapper/img-mapper/issues"
