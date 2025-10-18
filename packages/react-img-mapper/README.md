@@ -52,14 +52,12 @@ To explore the example locally:
 
    ```bash
    pnpm install
-   pnpm playground:dev
    ```
 
 3. **Start the playground**
 
    ```bash
-   cd apps/react-docs
-   pnpm playground:dev
+   pnpm dev:react
    ```
 
 4. Open [`http://localhost:3000`](http://localhost:3000) in your browser.

@@ -16,8 +16,8 @@
   "type": "module",
   "scripts": {
     "build": "storybook build",
-    "dev": "storybook dev -p 3001",
-    "dev:playground": "vite",
+    "dev": "vite",
+    "storybook": "storybook dev -p 3001",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
