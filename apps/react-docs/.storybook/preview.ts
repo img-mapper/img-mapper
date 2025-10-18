@@ -9,6 +9,7 @@ const preview = {
         color: /(background|color)$/i,
         date: /Date$/i,
       },
+      disableSaveFromUI: true,
     },
     actions: {
       argTypesRegex: '^on[A-Z].*',
@@ -22,6 +23,6 @@ const preview = {
       },
     },
   },
-} satisfies Preview;
+} as Preview;
 
 export default preview;

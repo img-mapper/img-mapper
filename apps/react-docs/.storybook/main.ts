@@ -10,6 +10,10 @@ const config = {
     options: {},
   },
   staticDirs: ['../public'],
+  features: {
+    interactions: false,
+    actions: false,
+  },
   viteFinal: (viteConfig) => {
     const { root } = viteConfig;
 

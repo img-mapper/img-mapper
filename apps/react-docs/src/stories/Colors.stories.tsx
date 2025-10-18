@@ -208,12 +208,10 @@ export const DynamicStrokeColor: Story = {
           TopComponent(
             'Dynamic Stroke Color Example',
             <p>
-              <p>
-                In this example, you can access the storybook{' '}
-                <span className="tag">control tab</span> to dynamically select{' '}
-                <span className="tag">strokeColor</span>, <span className="tag">lineWidth</span>{' '}
-                properties and change it according to your preference.
-              </p>
+              In this example, you can access the storybook <span className="tag">control tab</span>{' '}
+              to dynamically select <span className="tag">strokeColor</span>,{' '}
+              <span className="tag">lineWidth</span> properties and change it according to your
+              preference.
             </p>,
           )
         }

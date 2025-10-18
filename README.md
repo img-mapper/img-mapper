@@ -5,9 +5,9 @@
 <h1 align="center">Img Mapper</h1>
 
 <p align="center">
-  <a style="text-decoration:none" href="https://github.com/img-mapper/react-img-mapper/tree/master/packages/react-img-mapper">Documentation</a> |
+  <a style="text-decoration:none" href="https://github.com/img-mapper/img-mapper/tree/master/packages/react-img-mapper">Documentation</a> |
   <a href="https://react-img-mapper.nishargshah.dev">Examples</a> |
-  <a href="https://github.com/img-mapper/react-img-mapper/blob/master/CONTRIBUTING.md">Contributing</a>
+  <a href="https://github.com/img-mapper/img-mapper/blob/master/CONTRIBUTING.md">Contributing</a>
 </p>
 
 <p align="center">
