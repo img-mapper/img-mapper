@@ -39,6 +39,7 @@
   "types": "./dist/ImageMapper.d.ts",
   "scripts": {
     "build": "tsdown",
+    "dev": "tsdown --watch",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
