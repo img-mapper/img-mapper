@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://react-img-mapper.nishargshah.dev/logo.png" width="200">
+  <img src="https://react-img-mapper.nishargshah.dev/logo.png" width="200" style="border-radius: 40px;">
 </p>
 
 <h1 align="center">Img Mapper</h1>
