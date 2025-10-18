@@ -55,7 +55,6 @@ const DynamicMapper: Component<DynamicMapperProps> = (props) => {
       </div>
       <ImageMapper
         {...props}
-        ref={null}
         areas={areas}
         name={name}
         onChange={(_, newAreas) => setAreas(newAreas)}

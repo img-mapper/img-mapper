@@ -4,6 +4,10 @@
 
 - **react-img-mapper:** Added ESM support.
 
+### 🩹 Fixes
+
+- **react-img-mapper:** Required `ref` issue fixed.
+
 ## 2.0.1 (2025-10-18)
 
 ### 🚨 Breaking Change

@@ -109,7 +109,6 @@ const Mapper: Component<MapperProps> = (props) => {
     <Fragment>
       {TopComponent ? <TopComponent resetAreas={resetAreas} /> : null}
       <ImageMapper
-        ref={null}
         {...restProps}
         areas={areas}
         name={name}

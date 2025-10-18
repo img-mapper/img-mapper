@@ -113,5 +113,5 @@ export interface ImageMapperProps {
 }
 
 export interface ImageMapperPropsWithRef extends ImageMapperProps {
-  ref: Ref<RefProperties>;
+  ref?: Ref<RefProperties>;
 }
