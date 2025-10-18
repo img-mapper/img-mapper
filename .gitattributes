@@ -1,0 +1,9 @@
+# Project files
+.gitattributes text eol=lf
+.gitignore text eol=lf
+.npmrc text eol=lf
+.nvmrc text eol=lf
+.prettierignore text eol=lf
+
+# Global text-based files
+*.{js,cjs,mjs,jsx,ts,cts,mts,tsx,json,yaml,yml,sh,md,txt} text eol=lf

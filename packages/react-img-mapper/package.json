@@ -1,0 +1,56 @@
+{
+  "name": "react-img-mapper",
+  "version": "2.0.1",
+  "description": "A React Component for Creating Interactive and Highlighted Zones on Images",
+  "keywords": [
+    "react",
+    "react-img-mapper",
+    "react-image-mapper",
+    "img-mapper",
+    "image-mapper",
+    "img mapper",
+    "image mapper",
+    "docs react img mapper",
+    "react img mapper docs",
+    "docs react image mapper",
+    "react image mapper docs"
+  ],
+  "homepage": "https://react-img-mapper.nishargshah.dev",
+  "bugs": {
+    "url": "https://github.com/img-mapper/img-mapper/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/img-mapper/img-mapper.git",
+    "directory": "packages/react-img-mapper"
+  },
+  "license": "MIT",
+  "author": "Nisharg Shah <nishargshah3101@gmail.com>",
+  "type": "commonjs",
+  "main": "./dist/src/ImageMapper.js",
+  "types": "./dist/src/ImageMapper.d.ts",
+  "scripts": {
+    "prebuild": "rimraf ./dist",
+    "build": "tsc -b",
+    "postbuild": "tsc-alias",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "react-fast-compare": "^3.2.2"
+  },
+  "devDependencies": {
+    "@types/react": "catalog:",
+    "@types/react-dom": "catalog:",
+    "react": "catalog:",
+    "rimraf": "catalog:",
+    "tsc-alias": "^1.8.16",
+    "typescript": "catalog:"
+  },
+  "peerDependencies": {
+    "react": "^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0",
+    "react-dom": "^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}

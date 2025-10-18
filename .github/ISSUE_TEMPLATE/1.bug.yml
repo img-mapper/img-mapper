@@ -3,10 +3,8 @@ description: Create a bug report
 assignees:
   - NishargShah
 labels:
+  - new
   - bug
-  - help wanted
-  - question
-type: Bug
 body:
   - type: markdown
     attributes:
@@ -58,13 +56,13 @@ body:
       description: Please provide your desktop & smartphone environment if applicable
       value: |
         Desktop
-        
+
         - OS: [e.g. ubuntu]
         - Browser: [e.g. chrome, safari]
         - Version: [e.g. 22.04]
-        
+
         Smartphone
-        
+
         - Device: [e.g. samsung 24]
         - OS: [e.g. Android 15]
         - Browser: [e.g. chrome, safari]

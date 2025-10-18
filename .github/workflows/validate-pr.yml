@@ -1,0 +1,34 @@
+name: Validate Pull Request
+
+on:
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  validate_pr:
+    name: Validating Pull Request
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install PNPM
+        uses: pnpm/action-setup@v4
+        with:
+          run_install: false
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: '.nvmrc'
+          cache: 'pnpm'
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Build Project
+        run: pnpm build
+
+      - name: Checking Linting
+        run: pnpm --silent script:lint --for=ci
