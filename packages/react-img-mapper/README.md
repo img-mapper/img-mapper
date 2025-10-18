@@ -47,13 +47,22 @@ To explore the example locally:
    ```bash
    git clone https://github.com/img-mapper/img-mapper.git
    ```
-2. **Install dependencies and start the playground:**
+
+2. **Install dependencies**
 
    ```bash
    pnpm install
    pnpm playground:dev
    ```
-3. Open [`http://localhost:3000`](http://localhost:3000) in your browser.
+
+3. **Start the playground**
+
+   ```bash
+   cd apps/react-docs
+   pnpm playground:dev
+   ```
+
+4. Open [`http://localhost:3000`](http://localhost:3000) in your browser.
 
 To build the package, run:
 
