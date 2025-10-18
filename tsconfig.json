@@ -19,10 +19,10 @@
       "path": "apps/react-img-mapper-docs"
     },
     {
-      "path": "packages/react-img-mapper"
+      "path": "apps/react-img-mapper-playground"
     },
     {
-      "path": "packages/react-img-mapper-playground"
+      "path": "packages/react-img-mapper"
     }
   ]
 }
