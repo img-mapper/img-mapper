@@ -27,12 +27,19 @@
   "license": "MIT",
   "author": "Nisharg Shah <nishargshah3101@gmail.com>",
   "type": "commonjs",
-  "main": "./dist/src/ImageMapper.js",
-  "types": "./dist/src/ImageMapper.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/cjs/src/ImageMapper.js",
+      "import": "./dist/es/src/ImageMapper.js",
+      "types": "./dist/cjs/src/ImageMapper.d.ts"
+    }
+  },
+  "main": "./dist/cjs/src/ImageMapper.js",
+  "types": "./dist/cjs/src/ImageMapper.d.ts",
   "scripts": {
     "prebuild": "rimraf ./dist",
-    "build": "tsc -b",
-    "postbuild": "tsc-alias",
+    "build": "tsc --module CommonJS --outDir dist/cjs && tsc --module ESNext --outDir dist/es",
+    "postbuild": "tsc-alias --outDir dist/cjs && tsc-alias --outDir dist/es",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
