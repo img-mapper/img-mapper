@@ -71,7 +71,7 @@ const App: FC = () => {
       <button onClick={handleClick} type="button">
         Highlight
       </button>
-      <button onClick={() => setAreas(JSON)} type="button">
+      <button onClick={() => setAreas(initialAreas)} type="button">
         Clear
       </button>
       {/* <button onClick={() => setNatural((prev) => !prev)} type="button">

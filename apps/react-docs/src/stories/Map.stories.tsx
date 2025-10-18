@@ -12,7 +12,7 @@ const meta = {
   title: 'Examples/Responsive Map',
   component: Mapper,
   tags: ['autodocs'],
-} satisfies Meta<typeof Mapper>;
+} as Meta<typeof Mapper>;
 
 type Story = StoryObj<typeof meta>;
 

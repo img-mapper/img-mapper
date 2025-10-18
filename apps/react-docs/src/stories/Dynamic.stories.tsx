@@ -7,7 +7,7 @@ const meta = {
   title: 'Examples/Dynamic All Properties',
   component: DynamicMapper,
   tags: ['autodocs'],
-} satisfies Meta<typeof DynamicMapper>;
+} as Meta<typeof DynamicMapper>;
 
 type Story = StoryObj<typeof meta>;
 

@@ -19,7 +19,7 @@ const meta = {
   title: 'Examples/Area',
   component: Mapper,
   tags: ['autodocs'],
-} satisfies Meta<typeof Mapper>;
+} as Meta<typeof Mapper>;
 
 type Story = StoryObj<typeof meta>;
 
