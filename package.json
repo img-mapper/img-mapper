@@ -1,7 +1,7 @@
 {
   "name": "img-mapper",
   "version": "2.0.1",
-  "description": "Highlight interactive zones in images",
+  "description": "Creates Interactive and Highlighted Zones on Images",
   "bugs": {
     "url": "https://github.com/img-mapper/img-mapper/issues"
   },
@@ -35,10 +35,10 @@
   "devDependencies": {
     "@changesets/cli": "^2.29.7",
     "@eslint/compat": "^1.4.0",
-    "@eslint/js": "^9.37.0",
+    "@eslint/js": "^9.38.0",
     "@stylistic/eslint-plugin": "^3.1.0",
-    "@types/node": "^24.7.2",
-    "eslint": "^9.37.0",
+    "@types/node": "^24.8.1",
+    "eslint": "^9.38.0",
     "eslint-config-airbnb-extended": "^2.3.2",
     "eslint-config-prettier": "^10.1.8",
     "eslint-import-resolver-typescript": "^4.4.4",

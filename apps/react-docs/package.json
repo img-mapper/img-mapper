@@ -25,10 +25,10 @@
     "react-syntax-highlighter": "^15.6.6"
   },
   "devDependencies": {
-    "@storybook/react-vite": "^9.1.10",
+    "@storybook/react-vite": "^9.1.13",
     "@types/react": "catalog:",
     "@types/react-syntax-highlighter": "^15.5.13",
-    "storybook": "^9.1.10",
+    "storybook": "^9.1.13",
     "typescript": "catalog:"
   }
 }

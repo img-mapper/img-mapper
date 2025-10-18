@@ -3,6 +3,7 @@
 ### 🚨 Breaking Change
 
 - Monorepo introduced
+- Repository renamed from `react-img-mapper` to `img-mapper`
 
 ### 🚀 Features
 

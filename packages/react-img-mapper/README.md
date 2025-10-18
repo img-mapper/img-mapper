@@ -1,23 +1,27 @@
-# React Img Mapper
+# `react-img-mapper`
 
-**React Component to Highlight Interactive Zones in Images**
+[![NPM Version](https://img.shields.io/npm/v/react-img-mapper)](https://www.npmjs.com/package/react-img-mapper)
+[![NPM Downloads](https://img.shields.io/npm/dw/react-img-mapper)](https://www.npmjs.com/package/react-img-mapper)
+[![NPM Last Update](https://img.shields.io/npm/last-update/react-img-mapper)](https://www.npmjs.com/package/react-img-mapper)
 
-### Key Features:
+**A React Component for Creating Interactive and Highlighted Zones on Images**
 
-1. Actively maintained repository.
-2. Built with TypeScript.
-3. Fully compatible with Next.js.
-4. Optimized for smaller bundle size.
-5. Comprehensive documentation.
-6. Toggle and reset functionality for single and multiple highlighted areas.
-7. Access image properties (width, height, etc.) using the `onLoad` callback.
-8. Fully responsive image mapper.
+### Key Features
+
+1. **Actively Maintained** — continuously updated for better performance and compatibility.
+2. **Built with TypeScript** — ensuring type safety and enhanced developer experience.
+3. **Next.js Ready** — fully compatible with SSR and Next.js projects.
+4. **Lightweight** — optimized for minimal bundle size.
+5. **Well-Documented** — detailed examples and API references.
+6. **Toggle & Reset Support** — manage single or multiple highlighted areas with ease.
+7. **Powerful Callbacks** — access image metadata (width, height, etc.) via `onLoad`.
+8. **Responsive by Design** — adapt seamlessly to various screen sizes and containers.
 
 ---
 
 ## Installation
 
-Install the package via your preferred package manager:
+Install using your preferred package manager:
 
 ```bash
 # npm
@@ -34,22 +38,24 @@ pnpm install react-img-mapper
 
 ## Demo & Examples
 
-**Live Demo:** [View Demo](https://img-mapper.github.io/react-img-mapper)
+**Live Demo:** [react-img-mapper.nishargshah.dev](https://react-img-mapper.nishargshah.dev)
 
-To run the example locally:
+To explore the example locally:
 
-1. Clone the repository:
+1. **Clone the repository:**
+
    ```bash
-   git clone https://github.com/img-mapper/react-img-mapper.git
+   git clone https://github.com/img-mapper/img-mapper.git
    ```
-2. Install dependencies and start the dev server:
+2. **Install dependencies and start the playground:**
+
    ```bash
-   pnpm playground:install
+   pnpm install
    pnpm playground:dev
    ```
-3. Open [`localhost:3000`](http://localhost:3000) in your browser.
+3. Open [`http://localhost:3000`](http://localhost:3000) in your browser.
 
-To build the project, run:
+To build the package, run:
 
 ```bash
 pnpm build
@@ -57,9 +63,9 @@ pnpm build
 
 ---
 
-## Usage
+## Usage Example
 
-Here’s how to integrate `react-img-mapper` into your project:
+Integrate `react-img-mapper` into your React app easily:
 
 ```javascript
 import React from 'react';
@@ -68,7 +74,7 @@ import ImageMapper from 'react-img-mapper';
 const Mapper = () => {
   const url = 'https://react-img-mapper.nishargshah.dev/assets/example.jpg';
   const name = 'my-map';
-  // GET JSON FROM BELOW URL AS AN EXAMPLE AND PUT IT HERE
+  // Example JSON data for mapping areas
   const areas = 'https://react-img-mapper.nishargshah.dev/assets/areas.json';
 
   return <ImageMapper src={url} name={name} areas={areas} />;
@@ -156,11 +162,3 @@ When triggered by an event handler, an area object includes the following additi
 | -------------- | ----------------- | ------------------------------------------------------------------------ |
 | `scaledCoords` | _array of number_ | Scaled coordinates adjusted based on the image's dimensions.             |
 | `center`       | _array of number_ | The center or centroid coordinates of the area, represented as `[X, Y]`. |
-
----
-
-## License
-
-Distributed with an MIT License. See LICENSE.txt for more details!
-
-Copyright (c) 2025 Nisharg Shah
