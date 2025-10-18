@@ -29,19 +29,16 @@
   "type": "commonjs",
   "exports": {
     ".": {
-      "require": "./dist/cjs/src/ImageMapper.js",
-      "import": "./dist/esm/src/ImageMapper.js",
-      "types": "./dist/@types/src/ImageMapper.d.ts"
-    }
+      "import": "./dist/ImageMapper.mjs",
+      "require": "./dist/ImageMapper.js"
+    },
+    "./package.json": "./package.json"
   },
-  "main": "./dist/cjs/src/ImageMapper.js",
-  "module": "./dist/esm/src/ImageMapper.js",
-  "types": "./dist/@types/src/ImageMapper.d.ts",
+  "main": "./dist/ImageMapper.js",
+  "module": "./dist/ImageMapper.mjs",
+  "types": "./dist/ImageMapper.d.ts",
   "scripts": {
-    "prebuild": "rimraf ./dist",
-    "build": "pnpm build:cjs && pnpm build:esm",
-    "build:cjs": "tsc -b tsconfig.cjs.json && tsc-alias -p tsconfig.cjs.json",
-    "build:esm": "tsc -b tsconfig.esm.json && tsc-alias -p tsconfig.esm.json",
+    "build": "tsdown",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
@@ -51,8 +48,7 @@
     "@types/react": "catalog:",
     "@types/react-dom": "catalog:",
     "react": "catalog:",
-    "rimraf": "catalog:",
-    "tsc-alias": "^1.8.16",
+    "tsdown": "^0.15.7",
     "typescript": "catalog:"
   },
   "peerDependencies": {
