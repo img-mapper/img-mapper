@@ -4,11 +4,11 @@
     "composite": true,
     "jsx": "react-jsx",
     "baseUrl": ".",
-    "declarationDir": "./dist/types",
+    "declarationDir": "./dist/@types",
     "paths": {
       "@/*": ["./src/*"]
     }
   },
-  "include": ["**/*.ts", "**/*.tsx", "**/*.mjs", "**/*.mts"],
+  "include": ["**/*.ts", "**/*.tsx", "**/*.mjs", "**/*.mts", "**/*.d.ts"],
   "exclude": ["node_modules", "dist"]
 }
