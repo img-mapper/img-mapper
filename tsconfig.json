@@ -16,7 +16,7 @@
   "files": [],
   "references": [
     {
-      "path": "apps/react-docs"
+      "path": "apps/react-examples"
     },
     {
       "path": "packages/react-img-mapper"

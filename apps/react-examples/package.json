@@ -1,15 +1,15 @@
 {
-  "name": "react-docs",
+  "name": "react-examples",
   "version": "2.0.2",
   "private": true,
-  "description": "Documentation of react-img-mapper",
+  "description": "Examples of react-img-mapper",
   "bugs": {
     "url": "https://github.com/img-mapper/img-mapper/issues"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/img-mapper/img-mapper.git",
-    "directory": "apps/react-docs"
+    "directory": "apps/react-examples"
   },
   "license": "MIT",
   "author": "Nisharg Shah <nishargshah3101@gmail.com>",
