@@ -2,8 +2,8 @@
 
 ### 🚨 Breaking Change
 
-- Monorepo introduced
-- Repository renamed from `react-img-mapper` to `img-mapper`
+- Monorepo introduced.
+- Repository renamed from `react-img-mapper` to `img-mapper`.
 
 ### 🚀 Features
 
@@ -11,7 +11,7 @@
 
 ### 🩹 Fixes
 
-- **react-img-mapper:** Fixed #96 issue 
+- **react-img-mapper:** Fixed #96 issue.
 
 ### ❤️ Thank You
 
@@ -30,9 +30,9 @@
 - **react-img-mapper:** `toggleHighlighted` prop changed to `toggle: true`.
 - **react-img-mapper:** `rerenderProps` prop removed.
 - **react-img-mapper:** `clearHighlightedArea` method removed.
-- **react-img-mapper:** Typescript types are changed
-  - `MapAreas` changed to `MapArea`
-  - `CustomArea` changed to `Area`
+- **react-img-mapper:** Typescript types are changed.
+  - `MapAreas` changed to `MapArea`.
+  - `CustomArea` changed to `Area`.
 
 ### 🚀 Features
 
@@ -44,9 +44,9 @@
 
 ### 🩹 Fixes
 
-- **react-img-mapper:** Fixed #66 issue 
-- **react-img-mapper:** Fixed #76 issue
-- **react-img-mapper:** Fixed #83 issue
+- **react-img-mapper:** Fixed #66 issue.
+- **react-img-mapper:** Fixed #76 issue.
+- **react-img-mapper:** Fixed #83 issue.
 
 ### ❤️ Thank You
 

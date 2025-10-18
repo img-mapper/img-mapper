@@ -4,6 +4,9 @@
     "composite": true,
     "skipLibCheck": true,
     "jsx": "react-jsx",
+    "target": "esnext",
+    "module": "preserve",
+    "moduleResolution": "bundler",
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"]
