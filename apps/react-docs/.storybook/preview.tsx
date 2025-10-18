@@ -1,8 +1,20 @@
+import { Fragment } from 'react';
+
+import { Analytics } from '@vercel/analytics/react';
+
 import '@/styles/stories.css';
 
 import type { Preview } from '@storybook/react-vite';
 
 const preview = {
+  decorators: [
+    (Story) => (
+      <Fragment>
+        <Analytics />
+        <Story />
+      </Fragment>
+    ),
+  ],
   parameters: {
     controls: {
       matchers: {
