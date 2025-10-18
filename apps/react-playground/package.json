@@ -1,5 +1,5 @@
 {
-  "name": "react-img-mapper-playground",
+  "name": "react-playground",
   "type": "commonjs",
   "scripts": {
     "dev": "pnpm vite --port 3000"

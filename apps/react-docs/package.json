@@ -1,5 +1,5 @@
 {
-  "name": "react-img-mapper-docs",
+  "name": "react-docs",
   "version": "2.0.1",
   "description": "Documentation of react-img-mapper",
   "bugs": {
@@ -8,7 +8,7 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/img-mapper/img-mapper.git",
-    "directory": "apps/react-img-mapper-docs"
+    "directory": "apps/react-docs"
   },
   "license": "MIT",
   "author": "Nisharg Shah <nishargshah3101@gmail.com>",
