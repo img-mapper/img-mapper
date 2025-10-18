@@ -30,11 +30,11 @@ import styles from '@/helpers/styles';
 
 import type { FC, ReactNode } from 'react';
 
-import type { ImageMapperPropsWithRef, MapArea, Refs } from '@/types';
-import type { PrevStateRef } from '@/types/dimensions.type';
-import type { CTX } from '@/types/draw.type';
+import type { ImageMapperPropsWithRef, MapArea, Refs } from '@/@types';
+import type { PrevStateRef } from '@/@types/dimensions';
+import type { CTX } from '@/@types/draw';
 
-export type * from '@/types';
+export type * from '@/@types';
 
 const ImageMapper: FC<ImageMapperPropsWithRef> = ({ ref, ...props }) => {
   const generatedProps = generateProps(props);

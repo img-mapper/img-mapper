@@ -3,7 +3,7 @@ import type {
   GetDimensions,
   GetDimensionValues,
   GetPropDimension,
-} from '@/types/dimensions.type';
+} from '@/@types/dimensions';
 
 export const getDimension: GetDimension = (dimension, img) => {
   if (!img.current) return 0;

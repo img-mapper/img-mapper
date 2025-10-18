@@ -1,5 +1,5 @@
-import type { Area, ImageMapperProps, MapArea } from '@/types';
-import type { GetPropDimensionParams } from '@/types/dimensions.type';
+import type { Area, ImageMapperProps, MapArea } from '@/@types';
+import type { GetPropDimensionParams } from '@/@types/dimensions';
 
 type ScaleCoordsParams = GetPropDimensionParams &
   Pick<Required<ImageMapperProps>, 'responsive' | 'parentWidth' | 'imgWidth'>;

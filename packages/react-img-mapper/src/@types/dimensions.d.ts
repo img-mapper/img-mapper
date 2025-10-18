@@ -1,6 +1,6 @@
 import type { RefObject } from 'react';
 
-import type { Dimension, ImageMapperProps, Refs, WidthHeight } from '@/types';
+import type { Dimension, ImageMapperProps, Refs, WidthHeight } from '@/@types';
 
 type ImgRef = RefObject<Refs['imgRef']>;
 
