@@ -1,3 +1,21 @@
+## 2.0.1 (2025-10-18)
+
+### 🚨 Breaking Change
+
+- Monorepo introduced
+
+### 🚀 Features
+
+- **react-docs:** Upgrade storybook to latest and improve the code.
+
+### 🩹 Fixes
+
+- **react-img-mapper:** Fixed #96 issue 
+
+### ❤️ Thank You
+
+@sheepysheepy
+
 ## 2.0.0 (2025-01-26)
 
 ### 🚨 Breaking Change
