@@ -30,16 +30,18 @@
   "exports": {
     ".": {
       "require": "./dist/cjs/src/ImageMapper.js",
-      "import": "./dist/es/src/ImageMapper.js",
-      "types": "./dist/cjs/src/ImageMapper.d.ts"
+      "import": "./dist/esm/src/ImageMapper.js",
+      "types": "./dist/types/ImageMapper.d.ts"
     }
   },
   "main": "./dist/cjs/src/ImageMapper.js",
-  "types": "./dist/cjs/src/ImageMapper.d.ts",
+  "module": "./dist/esm/src/ImageMapper.js",
+  "types": "./dist/types/ImageMapper.d.ts",
   "scripts": {
     "prebuild": "rimraf ./dist",
-    "build": "tsc --module CommonJS --outDir dist/cjs && tsc --module ESNext --outDir dist/es",
-    "postbuild": "tsc-alias --outDir dist/cjs && tsc-alias --outDir dist/es",
+    "build": "pnpm build:cjs && pnpm build:esm",
+    "build:cjs": "tsc -p tsconfig.cjs.json && tsc-alias -p tsconfig.cjs.json",
+    "build:esm": "tsc -p tsconfig.esm.json && tsc-alias -p tsconfig.esm.json",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {

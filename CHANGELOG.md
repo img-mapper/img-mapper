@@ -1,3 +1,9 @@
+## 2.0.2 (2025-10-19)
+
+### 🚀 Features
+
+- **react-img-mapper:** Added ESM support.
+
 ## 2.0.1 (2025-10-18)
 
 ### 🚨 Breaking Change
@@ -15,7 +21,7 @@
 
 ### ❤️ Thank You
 
-@sheepysheepy
+- @sheepysheepy
 
 ## 2.0.0 (2025-01-26)
 
