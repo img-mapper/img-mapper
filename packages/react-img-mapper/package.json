@@ -3,19 +3,18 @@
   "version": "2.0.2",
   "description": "A React Component for Creating Interactive and Highlighted Zones on Images",
   "keywords": [
-    "react",
     "react-img-mapper",
     "react-image-mapper",
     "img-mapper",
     "image-mapper",
     "img mapper",
     "image mapper",
-    "docs react img mapper",
+    "react img mapper",
+    "react image mapper",
     "react img mapper docs",
-    "docs react image mapper",
     "react image mapper docs"
   ],
-  "homepage": "https://react-img-mapper.nishargshah.dev",
+  "homepage": "https://img-mapper.nishargshah.dev",
   "bugs": {
     "url": "https://github.com/img-mapper/img-mapper/issues"
   },

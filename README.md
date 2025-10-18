@@ -1,13 +1,13 @@
 <p align="center">
-  <img src="https://react-img-mapper.nishargshah.dev/logo.png" width="200" style="border-radius: 40px;">
+  <img src="https://img-mapper.nishargshah.dev/logo.png" width="200" style="border-radius: 40px;">
 </p>
 
 <h1 align="center">Img Mapper</h1>
 
 <p align="center">
-  <a style="text-decoration:none" href="https://github.com/img-mapper/img-mapper/tree/master/packages/react-img-mapper">Documentation</a> |
+  <a style="text-decoration:none" href="https://img-mapper.nishargshah.dev">Documentation</a> |
   <a href="https://react-img-mapper.nishargshah.dev">Examples</a> |
-  <a href="https://github.com/img-mapper/img-mapper/blob/master/CONTRIBUTING.md">Contributing</a>
+  <a href="https://img-mapper.nishargshah.dev/contribute/guide">Contributing</a>
 </p>
 
 <p align="center">

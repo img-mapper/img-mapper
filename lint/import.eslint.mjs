@@ -22,6 +22,14 @@ const customImportESLintConfig = [
       'import-x/prefer-default-export': 'off',
     },
   },
+  // Disable Dependencies Import Issue for Templates ESLint Files
+  {
+    name: 'x/import-x/disable-extraneous-deps',
+    files: ['docs/**/*.{ts,cts,mts,tsx}'],
+    rules: {
+      'import-x/no-extraneous-dependencies': 'off',
+    },
+  },
   // Disable Extensions in Module Files
   {
     name: 'x/import-x/disable-extensions-in-module-files',
