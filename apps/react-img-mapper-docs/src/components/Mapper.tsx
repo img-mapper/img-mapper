@@ -38,8 +38,8 @@ const Mapper: Component<MapperProps> = (props) => {
 
   const getJSON = useCallback(() => {
     if (customJSON === 0) {
-      return initialAreas.map((cur) => {
-        const temp = { ...cur };
+      return initialAreas.map((item) => {
+        const temp = { ...item } as typeof item;
 
         if (customType === 'fill') {
           delete temp.fillColor;
@@ -55,10 +55,10 @@ const Mapper: Component<MapperProps> = (props) => {
     }
 
     if (customJSON === 1) {
-      return initialAreas.map((cur) => {
-        const temp = { ...cur };
+      return initialAreas.map((item) => {
+        const temp = { ...item } as typeof item;
 
-        if (['Front Wall', 'Window'].includes(cur.title)) {
+        if (['Front Wall', 'Window'].includes(item.title)) {
           if (customType === 'fill') {
             delete temp.fillColor;
           }
@@ -75,10 +75,10 @@ const Mapper: Component<MapperProps> = (props) => {
     }
 
     if (customJSON === 2) {
-      return initialAreas.map((cur) => {
-        const temp = { ...cur };
+      return initialAreas.map((item) => {
+        const temp = { ...item } as typeof item;
 
-        if (['Refrigerator', 'Window'].includes(cur.title)) {
+        if (['Refrigerator', 'Window'].includes(item.title)) {
           if (customType === 'active') {
             temp.active = false;
           }
@@ -111,7 +111,7 @@ const Mapper: Component<MapperProps> = (props) => {
         {...restProps}
         areas={areas}
         name={name}
-        onChange={(_, areas) => (isOnChangeNeeded ? setAreas(areas) : null)}
+        onChange={(_, newAreas) => (isOnChangeNeeded ? setAreas(newAreas) : null)}
         src={url}
       />
       {BottomComponent ? <BottomComponent resetAreas={resetAreas} /> : null}

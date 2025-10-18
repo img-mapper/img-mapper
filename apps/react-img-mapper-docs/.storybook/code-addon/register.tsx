@@ -1,12 +1,11 @@
+/* eslint-disable import-x/no-extraneous-dependencies */
+// DON'T REMOVE REACT FROM HERE
 import React from 'react';
 
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { atomOneDark } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 import { AddonPanel } from 'storybook/internal/components';
-import { addons, types } from 'storybook/manager-api';
-
-// DON'T REMOVE REACT FROM HERE
-import { useParameter } from 'storybook/manager-api';
+import { addons, types, useParameter } from 'storybook/manager-api';
 
 const Content = () => {
   const code = useParameter('code', 'No Code Available');

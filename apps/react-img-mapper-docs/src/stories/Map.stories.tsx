@@ -26,7 +26,7 @@ export const NonResponsiveDimensions: Story = {
         imgWidth={imgWidth}
         natural={natural}
         width={width}
-        TopComponent={async () =>
+        TopComponent={() =>
           TopComponent(
             'Non Responsive Dimensions Example',
             <p>
@@ -42,7 +42,7 @@ export const NonResponsiveDimensions: Story = {
               <br />
               <br />
               <span className="block">
-                Note: All the properties description and what it does it's available in{' '}
+                Note: All the properties description and what it does it&apos;s available in{' '}
                 <span className="tag">react img mapper</span> Github repo.
               </span>
             </p>,
@@ -84,7 +84,7 @@ export const ResponsiveDimensions: Story = {
       <Mapper
         responsive
         parentWidth={parentWidth}
-        TopComponent={async () =>
+        TopComponent={() =>
           TopComponent(
             'Responsive Dimensions Example',
             <p>
@@ -135,7 +135,7 @@ export const AllDimensions: Story = {
         parentWidth={parentWidth}
         responsive={responsive}
         width={width}
-        TopComponent={async () =>
+        TopComponent={() =>
           TopComponent(
             'All Dimensions Example',
             <p>

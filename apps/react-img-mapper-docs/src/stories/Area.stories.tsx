@@ -31,7 +31,7 @@ export const ShowHighlightedArea: Story = {
     return (
       <Mapper
         active={active}
-        TopComponent={async () =>
+        TopComponent={() =>
           TopComponent(
             'Show Highlighted Area Example',
             <p>
@@ -63,7 +63,7 @@ export const InArrayShowHighlightedArea: Story = {
     <Mapper
       customJSON={2}
       customType="active"
-      TopComponent={async () =>
+      TopComponent={() =>
         TopComponent(
           'Show Highlighted Area Example Based on Area JSON',
           <p>
@@ -95,7 +95,7 @@ export const DisabledArea: Story = {
     return (
       <Mapper
         disabled={disabled}
-        TopComponent={async () =>
+        TopComponent={() =>
           TopComponent(
             'Disabled Area Example',
             <p>
@@ -128,7 +128,7 @@ export const InArrayDisabledArea: Story = {
     <Mapper
       customJSON={2}
       customType="disabled"
-      TopComponent={async () =>
+      TopComponent={() =>
         TopComponent(
           'Disabled Area Example Based on Area JSON',
           <p>
@@ -157,7 +157,7 @@ export const StaySelectedHighlightedArea: Story = {
     <Mapper
       isOnChangeNeeded
       isMulti={false}
-      TopComponent={async () =>
+      TopComponent={() =>
         TopComponent(
           'Stay Selected Highlighted Area Example',
           <p>
@@ -180,7 +180,7 @@ export const StayMultipleSelectedHighlightedArea: Story = {
     <Mapper
       isMulti
       isOnChangeNeeded
-      TopComponent={async () =>
+      TopComponent={() =>
         TopComponent(
           'Stay Multiple Selected Highlighted Area Example',
           <p>
@@ -202,7 +202,7 @@ export const ClearSelectedHighlightedArea: Story = {
     <Mapper
       isMulti
       isOnChangeNeeded
-      TopComponent={async ({ resetAreas }) =>
+      TopComponent={({ resetAreas }) =>
         TopComponent(
           'Clear Selected Highlighted Area Example',
           <p>
@@ -233,7 +233,7 @@ export const ToggleStayHighlightedArea: Story = {
         isOnChangeNeeded
         isMulti={isMulti}
         toggle={toggle}
-        TopComponent={async () =>
+        TopComponent={() =>
           TopComponent(
             'Toggle Stay Highlighted Area Example',
             <p>
@@ -282,7 +282,7 @@ export const ZoomInZoomOutArea: Story = {
       <Mapper
         responsive
         parentWidth={zoom}
-        TopComponent={async () =>
+        TopComponent={() =>
           TopComponent(
             'Zoom In & Zoom Out Area',
             <p>

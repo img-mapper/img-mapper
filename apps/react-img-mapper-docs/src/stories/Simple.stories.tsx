@@ -15,7 +15,7 @@ type Story = StoryObj<typeof meta>;
 export const Simple: Story = {
   render: () => (
     <Mapper
-      TopComponent={async () =>
+      TopComponent={() =>
         TopComponent(
           'Simple Example',
           <p>Simple Example with default properties and required properties</p>,

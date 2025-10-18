@@ -26,7 +26,7 @@ export const FillColor: Story = {
     <Mapper
       customJSON={0}
       customType="fill"
-      TopComponent={async () =>
+      TopComponent={() =>
         TopComponent(
           'Default Fill Color Example',
           <p>
@@ -47,7 +47,7 @@ export const InArrayFillColor: Story = {
   render: () => (
     <Mapper
       customType="fill"
-      TopComponent={async () =>
+      TopComponent={() =>
         TopComponent(
           'Fill Color based on Area JSON Example',
           <p>
@@ -74,7 +74,7 @@ export const DynamicFillColor: Story = {
         customJSON={0}
         customType="fill"
         fillColor={fillColor}
-        TopComponent={async () =>
+        TopComponent={() =>
           TopComponent(
             'Dynamic Fill Color Example',
             <p>
@@ -114,7 +114,7 @@ export const DynamicMixArrayFillColor: Story = {
         customJSON={1}
         customType="fill"
         fillColor={fillColor}
-        TopComponent={async () =>
+        TopComponent={() =>
           TopComponent(
             'Dynamic Mix Array Fill Color Example',
             <p>
@@ -155,7 +155,7 @@ export const StrokeColor: Story = {
       customJSON={0}
       customType="stroke"
       lineWidth={2}
-      TopComponent={async () =>
+      TopComponent={() =>
         TopComponent(
           'Default Stroke Color Example',
           <p>
@@ -177,7 +177,7 @@ export const InArrayStrokeColor: Story = {
     <Mapper
       customType="stroke"
       lineWidth={2}
-      TopComponent={async () =>
+      TopComponent={() =>
         TopComponent(
           'Stroke Color based on Area JSON Example',
           <p>
@@ -204,7 +204,7 @@ export const DynamicStrokeColor: Story = {
         customType="stroke"
         lineWidth={lineWidth}
         strokeColor={strokeColor}
-        TopComponent={async () =>
+        TopComponent={() =>
           TopComponent(
             'Dynamic Stroke Color Example',
             <p>
@@ -247,7 +247,7 @@ export const DynamicMixArrayStrokeColor: Story = {
         customType="stroke"
         lineWidth={lineWidth}
         strokeColor={strokeColor}
-        TopComponent={async () =>
+        TopComponent={() =>
           TopComponent(
             'Dynamic Mix Array Stroke Color Example',
             <p>

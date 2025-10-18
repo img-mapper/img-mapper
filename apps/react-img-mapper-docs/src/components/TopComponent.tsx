@@ -1,6 +1,6 @@
-import type { ReactNode } from 'react';
+import type { JSX, ReactNode } from 'react';
 
-type TopComponentElement = (title: string, content: ReactNode) => ReactNode;
+type TopComponentElement = (title: string, content: ReactNode) => JSX.Element;
 
 const TopComponent: TopComponentElement = (title, content) => (
   <div className="top_container">
