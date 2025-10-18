@@ -22,6 +22,7 @@
     "dev:docs": "pnpm --filter react-docs dev",
     "dev:react": "concurrently 'pnpm dev:react-img-mapper' 'pnpm dev:docs'",
     "dev:react-img-mapper": "pnpm --filter react-img-mapper dev",
+    "dev:storybook": "pnpm --filter react-docs storybook",
     "format:check": "prettier . --check",
     "format:fix": "prettier . --write",
     "fresh:init": "pnpm clean:workspace && pnpm clean:generated-folders",

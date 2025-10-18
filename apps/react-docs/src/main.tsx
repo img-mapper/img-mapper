@@ -2,6 +2,6 @@ import React from 'react';
 
 import { createRoot } from 'react-dom/client';
 
-import App from '@/App';
+import Playground from '@/playground/Playground';
 
-createRoot(document.querySelector('#root') as Element).render(<App />);
+createRoot(document.querySelector('#root') as Element).render(<Playground />);
