@@ -10,7 +10,7 @@ import type { MapArea, RefProperties } from 'react-img-mapper';
 
 const { url, name } = CONSTANTS;
 
-const App: FC = () => {
+const Playground: FC = () => {
   const { areas: initialAreas } = useAreas();
 
   const [areas, setAreas] = useState<MapArea[]>(initialAreas);
@@ -84,4 +84,4 @@ const App: FC = () => {
   );
 };
 
-export default App;
+export default Playground;

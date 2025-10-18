@@ -1,6 +1,6 @@
 {
   "name": "react-img-mapper",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "A React Component for Creating Interactive and Highlighted Zones on Images",
   "keywords": [
     "react",
@@ -27,12 +27,19 @@
   "license": "MIT",
   "author": "Nisharg Shah <nishargshah3101@gmail.com>",
   "type": "commonjs",
-  "main": "./dist/src/ImageMapper.js",
-  "types": "./dist/src/ImageMapper.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/ImageMapper.mjs",
+      "require": "./dist/ImageMapper.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "main": "./dist/ImageMapper.js",
+  "module": "./dist/ImageMapper.mjs",
+  "types": "./dist/ImageMapper.d.ts",
   "scripts": {
-    "prebuild": "rimraf ./dist",
-    "build": "tsc -b",
-    "postbuild": "tsc-alias",
+    "build": "tsdown",
+    "dev": "tsdown --watch",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
@@ -42,8 +49,7 @@
     "@types/react": "catalog:",
     "@types/react-dom": "catalog:",
     "react": "catalog:",
-    "rimraf": "catalog:",
-    "tsc-alias": "^1.8.16",
+    "tsdown": "^0.15.7",
     "typescript": "catalog:"
   },
   "peerDependencies": {

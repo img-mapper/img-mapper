@@ -1,6 +1,6 @@
 import { getPropDimension } from '@/helpers/dimensions';
 
-import type { ComputeCenter, GetExtendedArea, ScaleCoords } from '@/types/area.types';
+import type { ComputeCenter, GetExtendedArea, ScaleCoords } from '@/@types/area';
 
 export const scaleCoords: ScaleCoords = (
   coords,

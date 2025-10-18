@@ -36,6 +36,8 @@ const DynamicMapper: Component<DynamicMapperProps> = (props) => {
     }
   }, [areas.length, initialAreas]);
 
+  if (areas.length === 0) return null;
+
   return (
     <Fragment>
       <div className="top_container">
@@ -53,7 +55,6 @@ const DynamicMapper: Component<DynamicMapperProps> = (props) => {
       </div>
       <ImageMapper
         {...props}
-        ref={null}
         areas={areas}
         name={name}
         onChange={(_, newAreas) => setAreas(newAreas)}

@@ -1,6 +1,6 @@
 import type { CSSProperties } from 'react';
 
-import type { StylesProps } from '@/types/styles.type';
+import type { StylesProps } from '@/@types/styles';
 
 const absPos: CSSProperties = {
   position: 'absolute',

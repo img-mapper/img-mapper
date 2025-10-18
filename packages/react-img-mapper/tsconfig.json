@@ -2,13 +2,13 @@
   "extends": "../../tsconfig.json",
   "compilerOptions": {
     "composite": true,
-    "outDir": "./dist",
     "jsx": "react-jsx",
+    "skipLibCheck": true,
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"]
     }
   },
-  "include": ["**/*.ts", "**/*.tsx", "**/*.mjs", "**/*.mts"],
+  "include": ["**/*.ts", "**/*.tsx", "**/*.mjs", "**/*.mts", "**/*.d.ts"],
   "exclude": ["node_modules", "dist"]
 }

@@ -1,6 +1,6 @@
 {
   "name": "react-docs",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "private": true,
   "description": "Documentation of react-img-mapper",
   "bugs": {
@@ -16,15 +16,15 @@
   "type": "module",
   "scripts": {
     "build": "storybook build",
-    "dev": "storybook dev -p 3001",
-    "dev:playground": "vite",
+    "dev": "vite",
+    "storybook": "storybook dev -p 3001",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "@vercel/analytics": "^1.5.0",
     "react": "catalog:",
     "react-dom": "catalog:",
-    "react-img-mapper": "^2.0.1",
+    "react-img-mapper": "workspace:*",
     "react-syntax-highlighter": "^15.6.6"
   },
   "devDependencies": {

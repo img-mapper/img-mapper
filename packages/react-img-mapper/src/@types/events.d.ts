@@ -1,4 +1,4 @@
-import type { AreaEvent, ImageEvent, ImageMapperProps, MapArea } from '@/types';
+import type { AreaEvent, ImageEvent, ImageMapperProps, MapArea } from '@/@types';
 
 export interface EventListenerParam {
   area: MapArea;

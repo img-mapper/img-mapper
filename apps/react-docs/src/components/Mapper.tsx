@@ -103,11 +103,12 @@ const Mapper: Component<MapperProps> = (props) => {
     if (areas.length === 0) setAreas(getJSON());
   }, [areas.length, getJSON]);
 
+  if (areas.length === 0) return null;
+
   return (
     <Fragment>
       {TopComponent ? <TopComponent resetAreas={resetAreas} /> : null}
       <ImageMapper
-        ref={null}
         {...restProps}
         areas={areas}
         name={name}
