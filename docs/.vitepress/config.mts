@@ -89,7 +89,7 @@ export default defineConfig({
         items: [
           {
             text: 'Installation',
-            link: '/react/installation',
+            link: '/vue/installation',
           },
         ],
       },
