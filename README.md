@@ -6,7 +6,7 @@
 
 <p align="center">
   <a style="text-decoration:none" href="https://img-mapper.nishargshah.dev">Documentation</a> |
-  <a href="https://react-img-mapper.nishargshah.dev">Examples</a> |
+  <a href="https://img-mapper-examples.nishargshah.dev">Examples</a> |
   <a href="https://img-mapper.nishargshah.dev/contribute/guide">Contributing</a>
 </p>
 

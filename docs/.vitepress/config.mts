@@ -11,7 +11,7 @@ const { version } = JSON.parse(fs.readFileSync(path.join(projectRoot, 'package.j
 const githubUrl = 'https://github.com/img-mapper/img-mapper';
 const npmUrl = 'https://www.npmjs.com/package/react-img-mapper';
 const siteUrl = 'https://img-mapper.nishargshah.dev';
-const exampleUrl = 'https://react-img-mapper.nishargshah.dev';
+const exampleUrl = 'https://img-mapper-examples.nishargshah.dev';
 
 const title = 'Img Mapper';
 const description =

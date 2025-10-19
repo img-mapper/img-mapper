@@ -1,5 +1,5 @@
 {
-  "name": "react-examples",
+  "name": "examples",
   "version": "2.0.2",
   "private": true,
   "description": "Examples of react-img-mapper",
@@ -9,7 +9,7 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/img-mapper/img-mapper.git",
-    "directory": "apps/react-examples"
+    "directory": "apps/examples"
   },
   "license": "MIT",
   "author": "Nisharg Shah <nishargshah3101@gmail.com>",
