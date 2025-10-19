@@ -87,6 +87,10 @@ export default defineConfig({
             text: 'Installation',
             link: '/react/installation',
           },
+          {
+            text: 'Properties',
+            link: '/react/properties',
+          },
         ],
       },
       {
@@ -96,6 +100,10 @@ export default defineConfig({
           {
             text: 'Installation',
             link: '/vue/installation',
+          },
+          {
+            text: 'Properties',
+            link: '/vue/properties',
           },
         ],
       },
