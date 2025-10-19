@@ -26,7 +26,7 @@
     "dev:storybook": "pnpm --filter examples storybook",
     "format:check": "prettier . --check",
     "format:fix": "prettier . --write",
-    "fresh:init": "pnpm clean:workspace && pnpm clean:generated-folders",
+    "fresh:init": "pnpm clean:workspace && pnpm clean:generated-folders && pnpm install",
     "lint": "eslint .",
     "lint:fix": "pnpm --silent lint --fix",
     "pkg:prepare": "pnpm changeset && pnpm changeset version",

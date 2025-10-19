@@ -27,9 +27,6 @@
   "devDependencies": {
     "typescript": "catalog:",
     "vitepress": "^1.6.4",
-    "vitepress-plugin-group-icons": "^1.6.3"
-  },
-  "engines": {
-    "node": ">=16.0.0"
+    "vitepress-plugin-group-icons": "^1.6.4"
   }
 }

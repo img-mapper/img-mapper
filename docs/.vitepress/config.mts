@@ -5,6 +5,8 @@ import { fileURLToPath } from 'node:url';
 import { defineConfig } from 'vitepress';
 import { groupIconMdPlugin, groupIconVitePlugin } from 'vitepress-plugin-group-icons';
 
+import type { Plugin } from 'vitepress';
+
 const projectRoot = fileURLToPath(new URL('../..', import.meta.url));
 const { version } = JSON.parse(fs.readFileSync(path.join(projectRoot, 'package.json'), 'utf8'));
 
@@ -29,7 +31,7 @@ export default defineConfig({
     },
   },
   vite: {
-    plugins: [groupIconVitePlugin()],
+    plugins: [groupIconVitePlugin() as Plugin],
   },
   sitemap: {
     hostname: siteUrl,
