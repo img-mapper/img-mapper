@@ -11,9 +11,9 @@
 </p>
 
 <p align="center">
-  <a href="https://www.npmjs.com/package/react-img-mapper"><img src="https://img.shields.io/npm/v/react-img-mapper?style=flat&labelColor=ffffff&color=5a36e6" alt="npm version"></a>
-  <a href="https://www.npmjs.com/package/react-img-mapper"><img src="https://img.shields.io/npm/dm/react-img-mapper?style=flat&labelColor=ffffff&color=5a36e6" alt="npm downloads"></a>
-  <a href="https://www.npmjs.com/package/react-img-mapper"><img src="https://img.shields.io/npm/last-update/react-img-mapper?style=flat&labelColor=ffffff&color=5a36e6" alt="npm last updated"></a>
+  <a href="https://www.npmjs.com/package/react-img-mapper"><img src="https://img.shields.io/npm/v/react-img-mapper?style=flat&labelColor=ffffff&color=00acc1" alt="npm version"></a>
+  <a href="https://www.npmjs.com/package/react-img-mapper"><img src="https://img.shields.io/npm/dm/react-img-mapper?style=flat&labelColor=ffffff&color=00acc1" alt="npm downloads"></a>
+  <a href="https://www.npmjs.com/package/react-img-mapper"><img src="https://img.shields.io/npm/last-update/react-img-mapper?style=flat&labelColor=ffffff&color=00acc1" alt="npm last updated"></a>
 </p>
 
 Libraries for Creating Interactive and Highlighted Zones on Images.
