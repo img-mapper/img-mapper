@@ -14,7 +14,7 @@ type Story = StoryObj<typeof meta>;
 export const DynamicAllProperties: Story = {
   render: (args) => <DynamicMapper {...args} />,
   parameters: {
-    code: dynamicAllPropertiesCode,
+    reactCode: dynamicAllPropertiesCode,
   },
   args: {
     isMulti: true,

@@ -24,7 +24,7 @@ export const Simple: Story = {
     />
   ),
   parameters: {
-    code: simpleCode,
+    reactCode: simpleCode,
   },
 };
 

@@ -16,7 +16,7 @@
   "type": "module",
   "scripts": {
     "build": "storybook build",
-    "dev": "vite",
+    "dev": "vite --port 3000",
     "storybook": "storybook dev -p 3001",
     "typecheck": "tsc --noEmit"
   },

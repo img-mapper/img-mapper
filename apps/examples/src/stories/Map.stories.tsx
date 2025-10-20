@@ -52,7 +52,7 @@ export const NonResponsiveDimensions: Story = {
     );
   },
   parameters: {
-    code: nonResponsiveDimensionsCode,
+    reactCode: nonResponsiveDimensionsCode,
   },
   args: {
     width: 640,
@@ -111,7 +111,7 @@ export const ResponsiveDimensions: Story = {
     );
   },
   parameters: {
-    code: responsiveDimensionsCode,
+    reactCode: responsiveDimensionsCode,
   },
   args: {
     parentWidth: 640,
@@ -162,7 +162,7 @@ export const AllDimensions: Story = {
     );
   },
   parameters: {
-    code: allDimensionsCode,
+    reactCode: allDimensionsCode,
   },
   args: {
     width: 640,

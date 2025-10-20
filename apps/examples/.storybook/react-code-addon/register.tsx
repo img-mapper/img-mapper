@@ -7,23 +7,23 @@ import { atomOneDark } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 import { AddonPanel } from 'storybook/internal/components';
 import { addons, types, useParameter } from 'storybook/manager-api';
 
-const Content = () => {
-  const code = useParameter('code', 'No Code Available');
+const ReactContent = () => {
+  const reactCode = useParameter('reactCode', 'No Code Available');
 
   return (
-    <SyntaxHighlighter showLineNumbers language="jsx" style={atomOneDark}>
-      {code}
+    <SyntaxHighlighter showLineNumbers wrapLongLines language="jsx" style={atomOneDark}>
+      {reactCode}
     </SyntaxHighlighter>
   );
 };
 
-addons.register('my/code-addon', () => {
-  addons.add('code-addon/panel', {
-    title: 'Code',
+addons.register('my/react-code-addon', () => {
+  addons.add('react-code-addon/panel', {
+    title: 'React',
     type: types.PANEL,
     render: ({ active }) => (
       <AddonPanel active={active ?? false}>
-        <Content />
+        <ReactContent />
       </AddonPanel>
     ),
   });

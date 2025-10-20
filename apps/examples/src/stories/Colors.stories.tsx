@@ -40,7 +40,7 @@ export const FillColor: Story = {
     />
   ),
   parameters: {
-    code: fillColorCode,
+    reactCode: fillColorCode,
   },
 };
 
@@ -62,7 +62,7 @@ export const InArrayFillColor: Story = {
     />
   ),
   parameters: {
-    code: inArrayFillColorCode,
+    reactCode: inArrayFillColorCode,
   },
 };
 
@@ -95,7 +95,7 @@ export const DynamicFillColor: Story = {
     );
   },
   parameters: {
-    code: dynamicFillColorCode,
+    reactCode: dynamicFillColorCode,
   },
   args: {
     fillColor: 'rgba(255, 255, 255, 0.5)',
@@ -140,7 +140,7 @@ export const DynamicMixArrayFillColor: Story = {
     );
   },
   parameters: {
-    code: dynamicMixArrayFillColorCode,
+    reactCode: dynamicMixArrayFillColorCode,
   },
   args: {
     fillColor: 'rgba(255, 255, 255, 0.5)',
@@ -172,7 +172,7 @@ export const StrokeColor: Story = {
     />
   ),
   parameters: {
-    code: strokeColorCode,
+    reactCode: strokeColorCode,
   },
 };
 
@@ -194,7 +194,7 @@ export const InArrayStrokeColor: Story = {
     />
   ),
   parameters: {
-    code: inArrayStrokeColorCode,
+    reactCode: inArrayStrokeColorCode,
   },
 };
 
@@ -222,7 +222,7 @@ export const DynamicStrokeColor: Story = {
     );
   },
   parameters: {
-    code: dynamicStrokeColorCode,
+    reactCode: dynamicStrokeColorCode,
   },
   args: {
     strokeColor: 'rgba(0, 0, 0, 0.5)',
@@ -274,7 +274,7 @@ export const DynamicMixArrayStrokeColor: Story = {
     );
   },
   parameters: {
-    code: dynamicMixArrayStrokeColorCode,
+    reactCode: dynamicMixArrayStrokeColorCode,
   },
   args: {
     strokeColor: 'rgba(0, 0, 0, 0.5)',

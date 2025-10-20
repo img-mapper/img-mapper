@@ -45,7 +45,7 @@ export const ShowHighlightedArea: Story = {
     );
   },
   parameters: {
-    code: showHighlightedAreaCode,
+    reactCode: showHighlightedAreaCode,
   },
   args: {
     active: true,
@@ -84,7 +84,7 @@ export const InArrayShowHighlightedArea: Story = {
     />
   ),
   parameters: {
-    code: inArrayShowHighlightedAreaCode,
+    reactCode: inArrayShowHighlightedAreaCode,
   },
 };
 
@@ -111,7 +111,7 @@ export const DisabledArea: Story = {
     );
   },
   parameters: {
-    code: disabledAreaCode,
+    reactCode: disabledAreaCode,
   },
   args: {
     disabled: true,
@@ -150,7 +150,7 @@ export const InArrayDisabledArea: Story = {
     />
   ),
   parameters: {
-    code: inArrayDisabledAreaCode,
+    reactCode: inArrayDisabledAreaCode,
   },
 };
 
@@ -173,7 +173,7 @@ export const StaySelectedHighlightedArea: Story = {
     />
   ),
   parameters: {
-    code: staySelectedHighlightedAreaCode,
+    reactCode: staySelectedHighlightedAreaCode,
   },
 };
 
@@ -196,7 +196,7 @@ export const StayMultipleSelectedHighlightedArea: Story = {
     />
   ),
   parameters: {
-    code: stayMultipleSelectedHighlightedAreaCode,
+    reactCode: stayMultipleSelectedHighlightedAreaCode,
   },
 };
 
@@ -224,7 +224,7 @@ export const ClearSelectedHighlightedArea: Story = {
     />
   ),
   parameters: {
-    code: clearSelectedHighlightedAreaCode,
+    reactCode: clearSelectedHighlightedAreaCode,
   },
 };
 
@@ -252,7 +252,7 @@ export const ToggleStayHighlightedArea: Story = {
     );
   },
   parameters: {
-    code: toggleStayHighlightedAreaCode,
+    reactCode: toggleStayHighlightedAreaCode,
   },
   args: {
     isMulti: true,
@@ -271,7 +271,7 @@ export const ToggleStayHighlightedArea: Story = {
 export const ZoomInZoomOutArea: Story = {
   render: ({ parentWidth }) => <ZoomInZoomOutAreaComp parentWidth={parentWidth} />,
   parameters: {
-    code: zoomInZoomOutAreaCode,
+    reactCode: zoomInZoomOutAreaCode,
   },
   args: {
     parentWidth: 100,
