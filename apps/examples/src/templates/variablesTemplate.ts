@@ -4,7 +4,7 @@ const { url, name, areasUrl } = CONSTANTS;
 
 const variablesTemplate = `const url = '${url}';
   const name = '${name}';
-  // GET JSON FROM BELOW URL AS AN EXAMPLE
+  // Get JSON from below URL as an Example and put it here
   const areas = '${areasUrl}';`;
 
 export default variablesTemplate;
