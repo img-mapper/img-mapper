@@ -18,7 +18,7 @@ export const Simple: Story = {
       TopComponent={() =>
         TopComponent(
           'Simple Example',
-          <p>Simple Example with default properties and required properties</p>,
+          <p>Basic example showcasing the default setup and essential required properties.</p>,
         )
       }
     />

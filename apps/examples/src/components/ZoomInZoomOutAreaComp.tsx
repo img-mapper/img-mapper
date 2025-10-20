@@ -28,11 +28,12 @@ const ZoomInZoomOutAreaComp: Component<ZoomInZoomOutAreaCompProps> = (props) => 
       parentWidth={zoom}
       TopComponent={() =>
         TopComponent(
-          'Zoom In & Zoom Out Area',
+          'Zoom In & Zoom Out Area Example',
           <p>
-            In this example, Zoom is based on the <span className="tag">parentWidth</span> that you
-            can change by the <span className="tag">control tab</span>, you can press the below
-            buttons to see the <span className="tag">live</span> results in image mapper
+            In this example, zoom is controlled via the <span className="tag">parentWidth</span>,
+            which you can adjust using the Storybook <span className="tag">Controls</span> tab.
+            Click the buttons below to see the <span className="tag">live</span> zoom effect in the
+            image mapper:
             <br />
             <br />
             <button onClick={() => handleZoom('in')} style={{ marginRight: 8 }} type="button">

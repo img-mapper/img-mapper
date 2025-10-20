@@ -34,10 +34,10 @@ export const ShowHighlightedArea: Story = {
           TopComponent(
             'Show Highlighted Area Example',
             <p>
-              In this example, you have access to the storybook{' '}
-              <span className="tag">control tab</span> to dynamically choose if you wish to{' '}
-              <span className="tag">hide/see</span> the highlight area according to your preference
-              with the help of <span className="tag">active</span> toggle button.
+              In this example, you can use the Storybook <span className="tag">Controls</span> tab
+              to dynamically choose whether to <span className="tag">show or hide</span> the
+              highlighted areas using the
+              <span className="tag">active</span> toggle button, based on your preference.
             </p>,
           )
         }
@@ -64,18 +64,19 @@ export const InArrayShowHighlightedArea: Story = {
       customType="active"
       TopComponent={() =>
         TopComponent(
-          'Show Highlighted Area Example Based on Area JSON',
+          'Show Highlighted Area from Area JSON Example',
           <p>
-            in case, if we want to <span className="tag">hide/see</span> an{' '}
-            <span className="tag">active</span> area of an image from the{' '}
-            <span className="tag">whole</span> image. For example, here we have excluded the{' '}
-            <span className="tag">window</span> and <span className="tag">refrigerator</span>{' '}
-            <span className="tag">areas</span>
+            This example demonstrates how to selectively <span className="tag">show or hide</span>
+            <span className="tag">active</span> areas of an image. Here, the{' '}
+            <span className="tag">window</span>
+            and <span className="tag">refrigerator</span> <span className="tag">areas</span> are
+            excluded from visibility.
             <br />
             <br />
-            <span className="block">
-              Note: default is <span className="tag">true</span> for{' '}
-              <span className="tag">active</span> property for the remaining area
+            <span className="block note">
+              <strong>Note:</strong> By default, the <span className="tag">active</span> property is
+              set to
+              <span className="tag">true</span> for the remaining areas.
             </span>
           </p>,
         )
@@ -98,11 +99,11 @@ export const DisabledArea: Story = {
           TopComponent(
             'Disabled Area Example',
             <p>
-              In this example, you have access to the storybook{' '}
-              <span className="tag">control tab</span> to dynamically choose if you wish to{' '}
-              <span className="tag">disable/enable</span> the listeners and highlight area according
-              to your preference with the help of <span className="tag">disabled</span> toggle
-              button.
+              In this example, you can use the Storybook <span className="tag">Controls</span> tab
+              to dynamically
+              <span className="tag">enable or disable</span> event listeners and highlighted areas
+              using the
+              <span className="tag">disabled</span> toggle button, according to your preference.
             </p>,
           )
         }
@@ -129,17 +130,19 @@ export const InArrayDisabledArea: Story = {
       customType="disabled"
       TopComponent={() =>
         TopComponent(
-          'Disabled Area Example Based on Area JSON',
+          'Disabled Area from Area JSON Example',
           <p>
-            in case, if we want to <span className="tag">disable/enable</span> an area of an image
-            from the <span className="tag">whole</span> image. For example, here we have excluded
-            the <span className="tag">window</span> and <span className="tag">refrigerator</span>{' '}
-            <span className="tag">areas</span>
+            This example demonstrates how to selectively{' '}
+            <span className="tag">enable or disable</span>
+            specific areas of an image. Here, the <span className="tag">window</span> and
+            <span className="tag">refrigerator</span> <span className="tag">areas</span> are
+            excluded from interaction.
             <br />
             <br />
-            <span className="block">
-              Note: default is <span className="tag">false</span> for{' '}
-              <span className="tag">disabled</span> property for the remaining area
+            <span className="block note">
+              <strong>Note:</strong> By default, the <span className="tag">disabled</span> property
+              is set to
+              <span className="tag">false</span> for the remaining areas.
             </span>
           </p>,
         )
@@ -160,10 +163,10 @@ export const StaySelectedHighlightedArea: Story = {
         TopComponent(
           'Stay Selected Highlighted Area Example',
           <p>
-            In this example, you can <span className="tag">freeze</span> the{' '}
-            <span className="tag">area</span> you want to keep
-            <span className="tag">highlighted</span>, just by clicking and you can still be able to
-            highlight the <span className="tag">remaining</span> area on hover.
+            In this example, you can <span className="tag">freeze</span> specific{' '}
+            <span className="tag">areas</span>
+            to keep them <span className="tag">highlighted</span> by clicking, while still being
+            able to highlight the <span className="tag">remaining</span> areas on hover.
           </p>,
         )
       }
@@ -183,9 +186,10 @@ export const StayMultipleSelectedHighlightedArea: Story = {
         TopComponent(
           'Stay Multiple Selected Highlighted Area Example',
           <p>
-            This example is similar to <span className="tag">Stay Selected Highlighted Area</span>{' '}
-            section, the only additional feature is you can freeze{' '}
-            <span className="tag">multiple</span> highlighted areas.
+            This example is similar to the{' '}
+            <span className="tag">Stay Selected Highlighted Area</span> section, with the added
+            feature of allowing you to freeze <span className="tag">multiple</span> highlighted
+            areas simultaneously.
           </p>,
         )
       }
@@ -205,9 +209,10 @@ export const ClearSelectedHighlightedArea: Story = {
         TopComponent(
           'Clear Selected Highlighted Area Example',
           <p>
-            You can clear the <span className="tag">single/multiple</span> selected highlighted area
-            by resetting your state to initial, you can press the below button to see the{' '}
-            <span className="tag">live</span> results in image mapper
+            You can clear the <span className="tag">single or multiple</span> selected highlighted
+            areas by resetting the state to its initial value. Click the button below to see the
+            changes
+            <span className="tag">live</span> in the image mapper:
             <br />
             <br />
             <button onClick={resetAreas} type="button">
@@ -236,9 +241,9 @@ export const ToggleStayHighlightedArea: Story = {
           TopComponent(
             'Toggle Stay Highlighted Area Example',
             <p>
-              In this example, a new feature of <span className="tag">toggle</span> property is
-              added which will be used to <span className="tag">toggle</span> freezed highlighted
-              area.
+              This example introduces the <span className="tag">toggle</span> property, which allows
+              you to
+              <span className="tag">toggle</span> previously frozen highlighted areas on and off.
               <br />
             </p>,
           )

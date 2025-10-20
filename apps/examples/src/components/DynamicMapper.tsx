@@ -2,6 +2,7 @@ import { Fragment, useEffect, useState } from 'react';
 
 import ImageMapper from 'react-img-mapper';
 
+import TopComponent from '@/components/TopComponent';
 import CONSTANTS from '@/constants';
 import { useAreas } from '@/hooks/useAreas';
 
@@ -40,19 +41,16 @@ const DynamicMapper: Component<DynamicMapperProps> = (props) => {
 
   return (
     <Fragment>
-      <div className="top_container">
-        <h1 className="title">Dynamic All Properties Example</h1>
-        <div className="top_content">
-          <p>
-            In this example, I have tried to merge all the{' '}
-            <span className="tag">functionalities</span> that I have created till{' '}
-            <span className="tag">now</span>.
-            <br />
-            <br />
-            <span className="block">So just play with it and have fun 🤪</span>
-          </p>
-        </div>
-      </div>
+      {TopComponent(
+        'Dynamic All Properties Example',
+        <p>
+          In this example, all the <span className="tag">functionalities</span> developed so far
+          have been merged into a single demo.
+          <br />
+          <br />
+          <span className="block">Feel free to explore and have fun experimenting!</span>
+        </p>,
+      )}
       <ImageMapper
         {...props}
         areas={areas}

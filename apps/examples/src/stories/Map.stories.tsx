@@ -30,20 +30,20 @@ export const NonResponsiveDimensions: Story = {
           TopComponent(
             'Non Responsive Dimensions Example',
             <p>
-              In this example, <span className="tag">width</span>,{' '}
-              <span className="tag">height</span>, <span className="tag">imgWidth</span>, and{' '}
-              <span className="tag">natural</span> properties are available in the storybook{' '}
-              <span className="tag">controls tab</span>, you can change it and see the{' '}
+              In this example, the <span className="tag">width</span>,{' '}
+              <span className="tag">height</span>,<span className="tag">imgWidth</span>, and{' '}
+              <span className="tag">natural</span> properties are available in the Storybook{' '}
+              <span className="tag">Controls</span> tab. You can adjust them to see the{' '}
               <span className="tag">live</span> results in the image mapper.
               <br />
               <br />
-              By applying different values in different fields, you will notice that making the img
-              mapper <span className="tag">responsive</span> is difficult.
+              Experimenting with different values in these fields highlights that making the image
+              mapper fully <span className="tag">responsive</span> can be challenging.
               <br />
               <br />
-              <span className="block">
-                Note: All the properties description and what it does it&apos;s available in{' '}
-                <span className="tag">react img mapper</span> Github repo.
+              <span className="block note">
+                Note: Full descriptions and explanations of all properties are available in the
+                GitHub repository.
               </span>
             </p>,
           )
@@ -88,21 +88,21 @@ export const ResponsiveDimensions: Story = {
           TopComponent(
             'Responsive Dimensions Example',
             <p>
-              In this example, <span className="tag">responsive</span> and{' '}
+              In this example, the <span className="tag">responsive</span> and{' '}
               <span className="tag">parentWidth</span>
-              property is available in the storybook <span className="tag">controls tab</span>, you
-              can change it and see the <span className="tag">live</span> results in the image
-              mapper
+              properties are available in the Storybook <span className="tag">Controls</span> tab.
+              You can adjust them to see the <span className="tag">live</span> results in the image
+              mapper.
               <br />
               <br />
-              By applying different values in <span className="tag">parentWidth</span> field, you
-              will think, it&apos;s already responsive, lets copy the code and see the results,
-              kudos!!
+              By experimenting with different values for <span className="tag">parentWidth</span>,
+              you&apos;ll notice that the mapper becomes responsive. Try copying the code and see
+              the results, kudos!
               <br />
               <br />
-              <span className="block">
-                Note: All the properties description and what it does it&apos;s available in{' '}
-                <span className="tag">react img mapper</span> Github repo.
+              <span className="block note">
+                Note: Full descriptions and explanations of all properties are available in the
+                GitHub repository.
               </span>
             </p>,
           )
@@ -139,19 +139,22 @@ export const AllDimensions: Story = {
           TopComponent(
             'All Dimensions Example',
             <p>
-              All the fields description and what they do it&apos;s available in the{' '}
-              <span className="tag">react img mapper</span> GitHub repository.
+              In this example, the <span className="tag">width</span>,{' '}
+              <span className="tag">height</span>,<span className="tag">imgWidth</span>,{' '}
+              <span className="tag">natural</span>,<span className="tag">responsive</span>, and{' '}
+              <span className="tag">parentWidth</span> fields are available in the Storybook{' '}
+              <span className="tag">Controls</span> tab. You can modify them to see the{' '}
+              <span className="tag">live</span> results in the image mapper.
               <br />
               <br />
-              In this example, <span className="tag">width</span>,{' '}
-              <span className="tag">height</span>, <span className="tag">imgWidth</span>,{' '}
-              <span className="tag">natural</span>, <span className="tag">responsive</span>, and{' '}
-              <span className="tag">parentWidth</span>
-              field is available in the storybook <span className="tag">controls tab</span>, you can
-              change it and see the <span className="tag">live</span> results in the image mapper
+              This example combines all responsive and non-responsive properties, have fun
+              experimenting!
               <br />
               <br />
-              It&apos;s is a mixture of all responsive & non-responsive properties, have fun.
+              <span className="block note">
+                Note: Full descriptions and explanations of all properties are available in the
+                GitHub repository.
+              </span>
             </p>,
           )
         }

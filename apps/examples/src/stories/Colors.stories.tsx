@@ -28,11 +28,12 @@ export const FillColor: Story = {
       customType="fill"
       TopComponent={() =>
         TopComponent(
-          'Default Fill Color Example',
+          'Fill Color Example',
           <p>
-            In this example, the <span className="tag">fillColor</span> property is not available in{' '}
-            <span className="tag">areas</span> JSON, that&apos;s why it&apos;s giving the default
-            behavior of mapper by applying default <span className="tag">fillColor</span>.
+            In this example, the <span className="tag">fillColor</span> property is not defined in
+            the
+            <span className="tag">areas</span> JSON. As a result, the mapper uses its default
+            <span className="tag">fillColor</span> behavior.
           </p>,
         )
       }
@@ -49,12 +50,12 @@ export const InArrayFillColor: Story = {
       customType="fill"
       TopComponent={() =>
         TopComponent(
-          'Fill Color based on Area JSON Example',
+          'Fill Color from Area JSON Example',
           <p>
-            In this example, the <span className="tag">fillColor</span> property is available in{' '}
-            <span className="tag">areas</span> JSON, that&apos;s why it&apos;s applying{' '}
-            <span className="tag">fillColor</span> from JSON and we can see different{' '}
-            <span className="tag">fillColor</span> for different <span className="tag">areas</span>.
+            In this example, the <span className="tag">fillColor</span> property is defined in the
+            <span className="tag">areas</span> JSON. Therefore, the mapper applies the
+            <span className="tag">fillColor</span> values from the JSON, resulting in different
+            <span className="tag">fillColor</span> for each <span className="tag">area</span>.
           </p>,
         )
       }
@@ -78,13 +79,14 @@ export const DynamicFillColor: Story = {
           TopComponent(
             'Dynamic Fill Color Example',
             <p>
-              In this example, you can access the storybook <span className="tag">control tab</span>{' '}
-              to dynamically select <span className="tag">fillColor</span> property and change it
-              according to your preference.
+              In this example, you can use the Storybook <span className="tag">Controls</span> tab
+              to dynamically modify the <span className="tag">fillColor</span> property according to
+              your preference.
               <br />
               <br />
-              <span className="block">
-                Note: For better results you can decrease the opacity of the fillColor.
+              <span className="block note">
+                <strong>Note:</strong> For better visual results, try reducing the opacity of the
+                <span className="tag">fillColor</span>.
               </span>
             </p>,
           )
@@ -118,17 +120,18 @@ export const DynamicMixArrayFillColor: Story = {
           TopComponent(
             'Dynamic Mix Array Fill Color Example',
             <p>
-              in case, if we want to <span className="tag">exclude</span> an area of an image from
-              the <span className="tag">whole</span> image. For example, here we have excluded the{' '}
+              In this example, we demonstrate how to <span className="tag">exclude</span> a specific
+              area of an image from the <span className="tag">whole</span> mapping. Here, the{' '}
               <span className="tag">wall area</span>
-              and any changes to the <span className="tag">fillcolor</span> property from the{' '}
-              <span className="tag">control tab</span> would be only applied to the{' '}
+              is excluded, any changes made to the <span className="tag">fillColor</span> property
+              from the
+              <span className="tag">Controls</span> tab will only apply to the{' '}
               <span className="tag">wall area</span>.
               <br />
               <br />
-              <span className="block">
-                Note: <span className="tag">fillColor</span> property for the remaining area is
-                already available in the JSON area
+              <span className="block note">
+                <strong>Note:</strong> The <span className="tag">fillColor</span> property for the
+                remaining areas is already defined in the JSON data.
               </span>
             </p>,
           )
@@ -157,11 +160,12 @@ export const StrokeColor: Story = {
       lineWidth={2}
       TopComponent={() =>
         TopComponent(
-          'Default Stroke Color Example',
+          'Stroke Color Example',
           <p>
-            In this example, the <span className="tag">strokeColor</span> property is not available
-            in <span className="tag">areas</span> JSON, that&apos;s why it&apos;s giving the default
-            behavior of mapper by applying default <span className="tag">strokeColor</span>.
+            In this example, the <span className="tag">strokeColor</span> property is not defined in
+            the
+            <span className="tag">areas</span> JSON. Therefore, the mapper applies its default
+            <span className="tag">strokeColor</span> behavior.
           </p>,
         )
       }
@@ -179,11 +183,11 @@ export const InArrayStrokeColor: Story = {
       lineWidth={2}
       TopComponent={() =>
         TopComponent(
-          'Stroke Color based on Area JSON Example',
+          'Stroke Color from Area JSON Example',
           <p>
-            In this example, the <span className="tag">strokeColor</span> property is available in{' '}
-            <span className="tag">areas</span> JSON, that&apos;s why it&apos;s applying{' '}
-            <span className="tag">strokeColor</span> from JSON.
+            In this example, the <span className="tag">strokeColor</span> property is defined in the
+            <span className="tag">areas</span> JSON. Hence, the mapper applies the
+            <span className="tag">strokeColor</span> values directly from the JSON.
           </p>,
         )
       }
@@ -208,10 +212,9 @@ export const DynamicStrokeColor: Story = {
           TopComponent(
             'Dynamic Stroke Color Example',
             <p>
-              In this example, you can access the storybook <span className="tag">control tab</span>{' '}
-              to dynamically select <span className="tag">strokeColor</span>,{' '}
-              <span className="tag">lineWidth</span> properties and change it according to your
-              preference.
+              In this example, you can use the Storybook <span className="tag">Controls</span> tab
+              to dynamically adjust the <span className="tag">strokeColor</span> and{' '}
+              <span className="tag">lineWidth</span> properties according to your preference.
             </p>,
           )
         }
@@ -249,19 +252,20 @@ export const DynamicMixArrayStrokeColor: Story = {
           TopComponent(
             'Dynamic Mix Array Stroke Color Example',
             <p>
-              in case, if we want to <span className="tag">exclude</span> an area of an image from
-              the <span className="tag">whole</span> image. For example, here we have excluded the{' '}
+              This example demonstrates how to <span className="tag">exclude</span> a specific area
+              of an image from the <span className="tag">whole</span> mapping. Here, the{' '}
               <span className="tag">wall area</span>
-              and any changes to the <span className="tag">strokeColor</span> property from the{' '}
-              <span className="tag">control tab</span> would be only applied to the{' '}
-              <span className="tag">wall area</span>. Here, if you did any changes to the{' '}
-              <span className="tag">lineWidth</span> property from the{' '}
-              <span className="tag">control tab</span> would be applied to every area.
+              is excluded, so any changes to the <span className="tag">strokeColor</span> property
+              from the
+              <span className="tag">Controls</span> tab will only apply to the{' '}
+              <span className="tag">wall area</span>. Changes to the{' '}
+              <span className="tag">lineWidth</span> property, however, will be applied to all
+              areas.
               <br />
               <br />
-              <span className="block">
-                Note: <span className="tag">strokeColor</span> property for the remaining area is
-                already available in the JSON area
+              <span className="block note">
+                <strong>Note:</strong> The <span className="tag">strokeColor</span> for the
+                remaining areas is already defined in the JSON data.
               </span>
             </p>,
           )
