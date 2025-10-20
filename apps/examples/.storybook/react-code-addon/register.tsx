@@ -11,7 +11,7 @@ const ReactContent = () => {
   const reactCode = useParameter('reactCode', 'No Code Available');
 
   return (
-    <SyntaxHighlighter showLineNumbers wrapLongLines language="jsx" style={atomOneDark}>
+    <SyntaxHighlighter showLineNumbers language="javascript" style={atomOneDark}>
       {reactCode}
     </SyntaxHighlighter>
   );

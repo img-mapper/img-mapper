@@ -11,7 +11,7 @@ const VueContent = () => {
   const vueCode = useParameter('vueCode', 'No Code Available');
 
   return (
-    <SyntaxHighlighter showLineNumbers wrapLongLines language="javascript" style={atomOneDark}>
+    <SyntaxHighlighter showLineNumbers language="javascript" style={atomOneDark}>
       {vueCode}
     </SyntaxHighlighter>
   );
