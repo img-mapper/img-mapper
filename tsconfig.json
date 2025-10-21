@@ -19,6 +19,9 @@
       "path": "apps/examples"
     },
     {
+      "path": "apps/react-playground"
+    },
+    {
       "path": "packages/react-img-mapper"
     }
   ]
