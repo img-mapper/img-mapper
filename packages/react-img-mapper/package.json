@@ -28,14 +28,14 @@
   "type": "module",
   "exports": {
     ".": {
-      "import": "./dist/ImageMapper.js",
-      "require": "./dist/ImageMapper.cjs"
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
     },
     "./package.json": "./package.json"
   },
-  "main": "./dist/ImageMapper.cjs",
-  "module": "./dist/ImageMapper.js",
-  "types": "./dist/ImageMapper.d.cts",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.cts",
   "scripts": {
     "build": "tsdown",
     "dev": "tsdown --watch",

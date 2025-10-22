@@ -34,8 +34,6 @@ import type { ImageMapperPropsWithRef, MapArea, Refs } from '@/@types';
 import type { PrevStateRef } from '@/@types/dimensions';
 import type { CTX } from '@/@types/draw';
 
-export type * from '@/@types';
-
 const ImageMapper: FC<ImageMapperPropsWithRef> = ({ ref, ...props }) => {
   const generatedProps = generateProps(props);
   const {

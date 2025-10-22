@@ -5,7 +5,6 @@ export default defineConfig((options) => {
   const { watch } = options;
 
   return {
-    entry: './src/ImageMapper.tsx',
     dts: true,
     format: ['cjs', 'esm'],
     outDir: 'dist',
