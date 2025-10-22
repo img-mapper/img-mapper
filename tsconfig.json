@@ -19,12 +19,6 @@
       "path": "apps/examples"
     },
     {
-      "path": "apps/react-playground"
-    },
-    {
-      "path": "apps/vue-playground"
-    },
-    {
       "path": "packages/react-img-mapper"
     },
     {

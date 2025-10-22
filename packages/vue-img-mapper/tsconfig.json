@@ -1,0 +1,16 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "composite": true,
+    "target": "esnext",
+    "module": "preserve",
+    "moduleResolution": "bundler",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"],
+      "@playground/*": ["./playground/src/*"]
+    }
+  },
+  "include": ["**/*.ts", "**/*.tsx", "**/*.mjs", "**/*.mts", "**/*.d.ts", "**/*.vue"],
+  "exclude": ["node_modules", "dist"]
+}
