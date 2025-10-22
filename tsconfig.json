@@ -22,7 +22,13 @@
       "path": "apps/react-playground"
     },
     {
+      "path": "apps/vue-playground"
+    },
+    {
       "path": "packages/react-img-mapper"
+    },
+    {
+      "path": "packages/vue-img-mapper"
     }
   ]
 }

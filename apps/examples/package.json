@@ -27,7 +27,7 @@
     "react": "catalog:",
     "react-dom": "catalog:",
     "react-img-mapper": "workspace:*",
-    "react-syntax-highlighter": "^15.6.6"
+    "react-syntax-highlighter": "^16.0.0"
   },
   "devDependencies": {
     "@storybook/react-vite": "^9.1.13",
