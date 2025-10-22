@@ -5,6 +5,7 @@ export default defineConfig((options) => {
   const { watch } = options;
 
   return {
+    fromVite: true,
     dts: {
       vue: true,
     },
@@ -14,6 +15,5 @@ export default defineConfig((options) => {
     treeshake: !watch,
     minify: !watch,
     exports: !watch,
-    fromVite: true,
   };
 });
