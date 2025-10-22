@@ -2,7 +2,7 @@
   "$schema": "https://unpkg.com/@changesets/config@3.1.1/schema.json",
   "changelog": false,
   "commit": false,
-  "fixed": [["react-img-mapper"]],
+  "fixed": [["img-mapper", "react-img-mapper", "vue-img-mapper"]],
   "linked": [],
   "access": "public",
   "baseBranch": "master",

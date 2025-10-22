@@ -1,6 +1,6 @@
 {
   "name": "img-mapper-project",
-  "version": "2.0.3",
+  "version": "3.0.0",
   "description": "Creates Interactive and Highlighted Zones on Images",
   "bugs": {
     "url": "https://github.com/img-mapper/img-mapper/issues"
@@ -13,7 +13,6 @@
   "author": "Nisharg Shah <nishargshah3101@gmail.com>",
   "scripts": {
     "build": "pnpm -r build",
-    "build:react": "pnpm --filter react-img-mapper build",
     "clean:all": "pnpm clean:node_modules && pnpm clean:generated-folders",
     "clean:dist": "pnpx rimraf dist && pnpm -r exec pnpx rimraf dist",
     "clean:generated-folders": "pnpm clean:dist",
@@ -27,7 +26,7 @@
     "lint": "eslint .",
     "lint:fix": "pnpm --silent lint --fix",
     "pkg:prepare": "pnpm changeset && pnpm changeset version",
-    "pkg:publish": "pnpm build:react && pnpm changeset publish",
+    "pkg:publish": "pnpm build && pnpm changeset publish",
     "play:react": "pnpm --filter react-img-mapper play",
     "play:vue": "pnpm --filter vue-img-mapper play",
     "prepare": "husky || true",

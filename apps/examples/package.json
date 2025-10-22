@@ -1,6 +1,6 @@
 {
   "name": "examples",
-  "version": "2.0.3",
+  "version": "3.0.0",
   "private": true,
   "description": "Examples of react-img-mapper and vue-img-mapper",
   "bugs": {
