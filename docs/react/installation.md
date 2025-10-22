@@ -29,7 +29,7 @@ import ImageMapper from 'react-img-mapper';
 const Mapper = () => {
   const url = 'https://img-mapper-examples.nishargshah.dev/assets/example.jpg';
   const name = 'my-map';
-  // Get JSON from below URL as an Example and put it here
+  // Get JSON from below URL as an example and put it here
   const areas = 'https://img-mapper-examples.nishargshah.dev/assets/areas.json';
 
   return <ImageMapper src={url} name={name} areas={areas} />;

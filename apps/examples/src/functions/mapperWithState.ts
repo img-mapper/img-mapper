@@ -12,7 +12,7 @@ const Mapper = props => {
   const url = '${url}';
   const name = '${name}';
   
-  // Get JSON from below URL as an Example and put it into the useState hook
+  // Get JSON from below URL as an example and put it into the useState hook
   // URL: ${areasUrl}
   const [areas, setAreas] = useState([]);
   

@@ -1,3 +1,26 @@
+## 2.1.0 (2025-10-00)
+
+### 🚨 Breaking Change
+
+- Introduce `vue-img-mapper` package.
+- **react-img-mapper:** ESM is by default.
+
+### 🚀 Features
+
+- **examples:** Added Vue Code support.
+
+## 2.0.3 (2025-10-23)
+
+### 🚀 Features
+
+- **docs:** Introduce official documentation of `img-mapper`.
+- **react-img-mapper:** Introduce playground for contributors.
+
+### 🩹 Fixes
+
+- Contribution guidelines added.
+- **examples:** Examples descriptions changed.
+
 ## 2.0.2 (2025-10-19)
 
 ### 🚀 Features

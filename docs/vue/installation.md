@@ -44,7 +44,7 @@ export default {
     map() {
       return {
         name: 'my-map',
-        // Get JSON from below URL as an Example and put it here
+        // Get JSON from below URL as an example and put it here
         areas: 'https://img-mapper-examples.nishargshah.dev/assets/areas.json',
       };
     },
