@@ -85,7 +85,7 @@ $ pnpm script:lint
 
 ### 8. Submitting a PR {#submitting-pr}
 
-- Push your branch and open a Pull Request against `main`.
+- Push your branch and open a Pull Request against `canary`.
 - Clearly describe the problem, your solution, and reference any related issues/discussions.
 - Maintainers will review, suggest improvements if needed, and merge once approved.
 
