@@ -1,13 +1,17 @@
 packages:
+  - docs
   - apps/*
   - packages/*
 
 catalog:
   '@types/react': ^19.2.2
   '@types/react-dom': ^19.2.2
+  '@vercel/analytics': ^1.5.0
   react: ^19.2.0
   react-dom: ^19.2.0
+  tsdown: ^0.15.9
   typescript: ^5.9.3
+  vite: ^7.1.11
 
 onlyBuiltDependencies:
   - '@swc/core'

@@ -1,9 +1,0 @@
-{
-  "$schema": "https://openapi.vercel.sh/vercel.json",
-  "buildCommand": "pnpm --filter react-img-mapper build && pnpm build",
-  "cleanUrls": true,
-  "devCommand": "pnpm storybook",
-  "framework": "storybook",
-  "installCommand": "pnpm install",
-  "outputDirectory": "storybook-static"
-}

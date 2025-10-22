@@ -1,21 +1,20 @@
 {
   "name": "react-img-mapper",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "A React Component for Creating Interactive and Highlighted Zones on Images",
   "keywords": [
-    "react",
     "react-img-mapper",
     "react-image-mapper",
     "img-mapper",
     "image-mapper",
     "img mapper",
     "image mapper",
-    "docs react img mapper",
+    "react img mapper",
+    "react image mapper",
     "react img mapper docs",
-    "docs react image mapper",
     "react image mapper docs"
   ],
-  "homepage": "https://react-img-mapper.nishargshah.dev",
+  "homepage": "https://img-mapper.nishargshah.dev",
   "bugs": {
     "url": "https://github.com/img-mapper/img-mapper/issues"
   },
@@ -26,20 +25,21 @@
   },
   "license": "MIT",
   "author": "Nisharg Shah <nishargshah3101@gmail.com>",
-  "type": "commonjs",
+  "type": "module",
   "exports": {
     ".": {
-      "import": "./dist/ImageMapper.mjs",
-      "require": "./dist/ImageMapper.js"
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
     },
     "./package.json": "./package.json"
   },
-  "main": "./dist/ImageMapper.js",
-  "module": "./dist/ImageMapper.mjs",
-  "types": "./dist/ImageMapper.d.ts",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.cts",
   "scripts": {
     "build": "tsdown",
     "dev": "tsdown --watch",
+    "play": "vite --port 3000",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
@@ -48,9 +48,11 @@
   "devDependencies": {
     "@types/react": "catalog:",
     "@types/react-dom": "catalog:",
+    "@vitejs/plugin-react": "^5.0.4",
     "react": "catalog:",
-    "tsdown": "^0.15.7",
-    "typescript": "catalog:"
+    "tsdown": "catalog:",
+    "typescript": "catalog:",
+    "vite": "catalog:"
   },
   "peerDependencies": {
     "react": "^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0",

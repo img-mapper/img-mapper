@@ -35,6 +35,7 @@ const customGeneralESLintConfig = [
   {
     name: 'x/general/ts-only',
     files: ['**/*.{ts,cts,mts,tsx}'],
+    ignores: ['docs/**/*.{ts,cts,mts,tsx}'],
     rules: {
       'no-restricted-imports': [
         'error',

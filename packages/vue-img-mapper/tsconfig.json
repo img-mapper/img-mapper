@@ -1,0 +1,14 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "composite": true,
+    "skipLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"],
+      "@playground/*": ["./playground/src/*"]
+    }
+  },
+  "include": ["**/*.ts", "**/*.mjs", "**/*.mts", "**/*.vue"],
+  "exclude": ["node_modules", "dist"]
+}

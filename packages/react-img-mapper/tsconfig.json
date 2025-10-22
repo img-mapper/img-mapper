@@ -6,7 +6,8 @@
     "skipLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"],
+      "@playground/*": ["./playground/src/*"]
     }
   },
   "include": ["**/*.ts", "**/*.tsx", "**/*.mjs", "**/*.mts", "**/*.d.ts"],

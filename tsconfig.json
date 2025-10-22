@@ -1,13 +1,13 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "module": "CommonJS",
+    "target": "esnext",
+    "module": "preserve",
+    "moduleResolution": "bundler",
     "lib": ["dom", "dom.iterable", "esnext"],
     "strict": true,
     "noImplicitReturns": true,
     "forceConsistentCasingInFileNames": true,
     "esModuleInterop": true,
-    "moduleResolution": "node",
     "resolveJsonModule": true,
     "useUnknownInCatchVariables": true,
     "isolatedModules": true,
@@ -16,10 +16,16 @@
   "files": [],
   "references": [
     {
-      "path": "apps/react-docs"
+      "path": "apps/examples"
+    },
+    {
+      "path": "docs"
     },
     {
       "path": "packages/react-img-mapper"
+    },
+    {
+      "path": "packages/vue-img-mapper"
     }
   ]
 }

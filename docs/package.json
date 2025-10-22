@@ -1,0 +1,32 @@
+{
+  "name": "img-mapper-docs",
+  "version": "2.0.3",
+  "private": true,
+  "description": "Documentation of img-mapper",
+  "homepage": "https://img-mapper.nishargshah.dev",
+  "bugs": {
+    "url": "https://github.com/img-mapper/img-mapper/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/img-mapper/img-mapper.git",
+    "directory": "docs"
+  },
+  "license": "MIT",
+  "author": "Nisharg Shah <nishargshah3101@gmail.com>",
+  "type": "module",
+  "scripts": {
+    "build": "vitepress build",
+    "dev": "vitepress dev",
+    "preview": "vitepress preview",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@vercel/analytics": "catalog:"
+  },
+  "devDependencies": {
+    "typescript": "catalog:",
+    "vitepress": "^1.6.4",
+    "vitepress-plugin-group-icons": "^1.6.4"
+  }
+}
