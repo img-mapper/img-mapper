@@ -1,7 +1,8 @@
-## 2.1.0 (2025-10-00)
+## 3.0.0 (2025-10-00)
 
 ### 🚨 Breaking Change
 
+- Introduce `img-mapper` package.
 - Introduce `vue-img-mapper` package.
 - **react-img-mapper:** ESM is by default.
 
