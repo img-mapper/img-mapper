@@ -2,9 +2,6 @@
   "extends": "../tsconfig.json",
   "compilerOptions": {
     "composite": true,
-    "target": "esnext",
-    "module": "esnext",
-    "moduleResolution": "node",
     "skipLibCheck": true,
     "baseUrl": ".",
     "paths": {

@@ -19,6 +19,9 @@
       "path": "apps/examples"
     },
     {
+      "path": "docs"
+    },
+    {
       "path": "packages/react-img-mapper"
     },
     {

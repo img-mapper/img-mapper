@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import ImageMapper from '@/ImageMapper.vue'
+import ImageMapper from '@/ImageMapper.vue';
 </script>
 
 <template>
