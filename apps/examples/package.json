@@ -18,8 +18,8 @@
     "prebuild": "pnpm build:react",
     "build": "storybook build",
     "build:react": "pnpm --filter react-img-mapper build",
-    "prestorybook": "pnpm build:react",
-    "storybook": "storybook dev -p 3002",
+    "predev": "pnpm build:react",
+    "dev": "storybook dev -p 3002",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {

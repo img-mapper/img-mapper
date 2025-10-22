@@ -1,11 +1,11 @@
 import React, { useEffect, useRef, useState } from 'react';
 
-import ImageMapper from 'react-img-mapper';
-
-import { useAreas } from '@/hooks/useAreas';
+import ImageMapper from '@/ImageMapper';
+import { useAreas } from '@playground/hooks/useAreas';
 
 import type { FC } from 'react';
-import type { MapArea, RefProperties } from 'react-img-mapper';
+
+import type { MapArea, RefProperties } from '@/@types';
 
 const name = 'my-map';
 const url = 'https://img-mapper-examples.nishargshah.dev/assets/example.jpg';
