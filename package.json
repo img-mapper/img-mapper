@@ -1,5 +1,5 @@
 {
-  "name": "img-mapper",
+  "name": "img-mapper-project",
   "version": "2.0.3",
   "description": "Creates Interactive and Highlighted Zones on Images",
   "bugs": {
@@ -20,7 +20,7 @@
     "clean:node_modules": "pnpx rimraf node_modules && pnpm -r exec pnpx rimraf node_modules",
     "clean:workspace": "pnpm clean:node_modules && pnpx rimraf pnpm-lock.yaml",
     "dev:docs": "pnpm --filter img-mapper-docs dev",
-    "dev:storybook": "pnpm --filter examples dev",
+    "dev:examples": "pnpm --filter examples dev",
     "format:check": "prettier . --check",
     "format:fix": "prettier . --write",
     "fresh:init": "pnpm clean:workspace && pnpm clean:generated-folders && pnpm install",
