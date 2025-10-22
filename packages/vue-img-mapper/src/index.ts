@@ -1,2 +1,2 @@
-// eslint-disable-next-line import-x/prefer-default-export
-export { default as ImageMapper } from '@/ImageMapper.vue';
+// eslint-disable-next-line no-restricted-exports
+export { default } from '@/ImageMapper.vue';

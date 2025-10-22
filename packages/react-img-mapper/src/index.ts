@@ -1,2 +1,4 @@
-export { default as ImageMapper } from '@/ImageMapper';
 export type * from '@/@types';
+
+// eslint-disable-next-line no-restricted-exports
+export { default } from '@/ImageMapper';
