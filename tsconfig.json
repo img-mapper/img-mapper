@@ -22,6 +22,9 @@
       "path": "docs"
     },
     {
+      "path": "packages/img-mapper-core"
+    },
+    {
       "path": "packages/react-img-mapper"
     },
     {

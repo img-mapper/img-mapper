@@ -1,0 +1,8 @@
+# Ignore everything
+/*
+
+# Not ignored folders
+!dist
+
+# Inside dist
+*.tsbuildinfo

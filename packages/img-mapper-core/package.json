@@ -1,12 +1,12 @@
 {
-  "name": "img-mapper",
+  "name": "img-mapper-core",
   "version": "3.0.0",
   "description": "A Core Component for Creating Interactive and Highlighted Zones on Images",
   "keywords": [
-    "img-mapper",
-    "image-mapper",
-    "img mapper",
-    "image mapper"
+    "img-mapper-core",
+    "image-mapper-core",
+    "img mapper core",
+    "image mapper core"
   ],
   "homepage": "https://img-mapper.nishargshah.dev",
   "bugs": {
@@ -15,11 +15,14 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/img-mapper/img-mapper.git",
-    "directory": "packages/img-mapper"
+    "directory": "packages/img-mapper-core"
   },
   "license": "MIT",
   "author": "Nisharg Shah <nishargshah3101@gmail.com>",
   "type": "module",
+  "devDependencies": {
+    "tsdown": "catalog:"
+  },
   "engines": {
     "node": ">=16.0.0"
   }
