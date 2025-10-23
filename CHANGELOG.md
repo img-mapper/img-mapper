@@ -6,6 +6,10 @@
 - Introduce `vue-img-mapper` package.
 - **react-img-mapper:** ESM is by default.
 
+TouchEvent => AreaTouchEvent
+AreaEvent => AreaMouseEvent
+MouseEvent => ImageMouseEvent
+
 ### 🚀 Features
 
 - **examples:** Added Vue Code support.

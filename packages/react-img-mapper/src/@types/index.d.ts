@@ -1,4 +1,4 @@
-import type { HTMLProps, MouseEvent, Ref, TouchEvent as ReactTouchEvent } from 'react';
+import type { HTMLProps, MouseEvent, Ref, TouchEvent } from 'react';
 
 import type { ConditionalKeys, NoUndefinedField } from '@/@types/lib';
 
@@ -65,13 +65,15 @@ export type AreaProps = Omit<
   | 'onClick'
 > | null;
 
-export type TouchEvent = ReactTouchEvent<HTMLAreaElement>;
-export type AreaEvent = MouseEvent<HTMLAreaElement>;
-export type ImageEvent = MouseEvent<HTMLImageElement>;
+export type AreaTouchEvent = TouchEvent<HTMLAreaElement>;
+export type AreaMouseEvent = MouseEvent<HTMLAreaElement>;
+export type ImageMouseEvent = MouseEvent<HTMLImageElement>;
 
 export type ChangeEventHandler = ((selectedArea: MapArea, areas: MapArea[]) => void) | null;
-export type ImageEventHandler = ((event: ImageEvent) => void) | null;
-export type EventHandler<T = AreaEvent> = ((area: MapArea, index: number, e: T) => void) | null;
+export type ImageEventHandler = ((event: ImageMouseEvent) => void) | null;
+export type EventHandler<T = AreaMouseEvent> =
+  | ((area: MapArea, index: number, e: T) => void)
+  | null;
 export type LoadEventHandler = ((event: HTMLImageElement, dimensions: WidthHeight) => void) | null;
 
 interface ImageMapperProperties {
@@ -109,8 +111,8 @@ interface ImageMapperListeners {
   onClick?: EventHandler;
   onMouseDown?: EventHandler;
   onMouseUp?: EventHandler;
-  onTouchStart?: EventHandler<TouchEvent>;
-  onTouchEnd?: EventHandler<TouchEvent>;
+  onTouchStart?: EventHandler<AreaTouchEvent>;
+  onTouchEnd?: EventHandler<AreaTouchEvent>;
   onMouseMove?: EventHandler;
   onMouseEnter?: EventHandler;
   onMouseLeave?: EventHandler;
