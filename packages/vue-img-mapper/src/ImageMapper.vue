@@ -4,7 +4,7 @@ import { CTX } from '@/@types/draw';
 import { generateProps } from '@/helpers/constants';
 import styles from '@/helpers/styles';
 
-import { computed, getCurrentInstance, ref } from 'vue';
+import { computed, getCurrentInstance, onMounted, onUnmounted, ref, watch } from 'vue';
 
 const emit = defineEmits<ImageMapperListeners>();
 const props = defineProps<ImageMapperProps>();
@@ -45,48 +45,23 @@ const ctx = ref<CTX<null>['value']>(null);
 const interval = ref<number>(0);
 // const prevState = 0;
 
-// // Computed
-// const containerStyle = computed(() => ({
-//   position: 'relative' as const,
-//   display: 'inline-block' as const,
-// }));
+const init = () => {
+  if (img.value?.complete && canvasRef.value && containerRef.value) {
+    ctx.value = canvasRef.value.getContext('2d');
 
-// const imgClasses = computed(() => {
-//   const classes = ['img-mapper-img'];
-//   if (props.imgProps?.className) classes.push(props.imgProps.className);
-//   return classes.join(' ');
-// });
+    isRendered.value = true;
+  }
+};
 
-// const imgStyle = computed(() => ({
-//   ...props.imgProps?.style,
-//   display: props.responsive ? 'block' : 'inline-block',
-//   width: props.responsive ? '100%' : 'auto',
-//   height: 'auto',
-//   ...(isRendered.value ? {} : { display: 'none' }),
-// }));
+watch(isRendered, (newVal) => {
+  if (newVal && interval.value) {
+    clearInterval(interval.value);
+  }
+});
 
-// const canvasClasses = computed(() => {
-//   const classes = ['img-mapper-canvas'];
-//   if (props.canvasProps?.className) classes.push(props.canvasProps.className);
-//   return classes.join(' ');
-// });
-
-// const canvasStyle = computed(() => ({
-//   position: 'absolute' as const,
-//   top: 0,
-//   left: 0,
-//   pointerEvents: 'none' as const,
-// }));
-
-// const mapClasses = computed(() => {
-//   const classes = ['img-mapper-map'];
-//   if (props.mapProps?.className) classes.push(props.mapProps.className);
-//   return classes.join(' ');
-// });
-
-// const mapStyle = computed(() => ({
-//   cursor: props.onClick ? 'pointer' : 'default',
-// }));
+onMounted(() => {
+  interval.value = window.setInterval(init, 500);
+});
 
 // const filteredAreas = computed(() => props.areas.filter(area => !area.disabled));
 
@@ -270,13 +245,6 @@ const interval = ref<number>(0);
 //   }
 // };
 
-// const init = () => {
-//   if (img.value?.complete && canvasRef.value && containerRef.value) {
-//     ctx.value = canvasRef.value.getContext('2d');
-//     isRendered.value = true;
-//   }
-// };
-
 // // Event handlers
 // const handleImageClick = (e: MouseEvent) => {
 //   if (props.onImageClick) props.onImageClick(e);
@@ -347,16 +315,6 @@ const interval = ref<number>(0);
 //   resetCanvasAndPrefillArea();
 // }, { deep: true });
 
-// watch(isRendered, (newVal) => {
-//   if (newVal) {
-//     if (interval.value) {
-//       clearInterval(interval.value);
-//       interval.value = null;
-//     }
-//     initCanvas();
-//   }
-// });
-
 // watch([() => props.width, () => props.height, () => props.parentWidth], () => {
 //   if (isRendered.value) {
 //     initCanvas();
@@ -380,6 +338,12 @@ defineExpose({
     img: img.value,
     canvasRef: canvasRef.value,
   }),
+});
+
+onUnmounted(() => {
+  if (interval.value) {
+    clearInterval(interval.value);
+  }
 });
 </script>
 
