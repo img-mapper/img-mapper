@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-import type { MapArea } from 'react-img-mapper';
+import type { MapArea } from '@/@types';
 
 interface AreasHookOutput {
   areas: MapArea[];
