@@ -74,7 +74,7 @@ export type ImageEventHandler = ((event: ImageEvent) => void) | null;
 export type EventHandler<T = AreaEvent> = ((area: MapArea, index: number, e: T) => void) | null;
 export type LoadEventHandler = ((event: HTMLImageElement, dimensions: WidthHeight) => void) | null;
 
-export interface ImageMapperProps {
+interface ImageMapperProperties {
   src: string;
   name: string;
   areas: MapArea[];
@@ -92,12 +92,17 @@ export interface ImageMapperProps {
   natural?: boolean;
   responsive?: boolean;
   parentWidth?: number;
+}
+
+interface ImageMapperElementProps {
   containerProps?: ContainerProps;
   imgProps?: ImgProps;
   canvasProps?: CanvasProps;
   mapProps?: MapProps;
   areaProps?: AreaProps | AreaProps[];
+}
 
+interface ImageMapperListeners {
   onChange?: ChangeEventHandler;
   onImageClick?: ImageEventHandler;
   onImageMouseMove?: ImageEventHandler;
@@ -111,6 +116,10 @@ export interface ImageMapperProps {
   onMouseLeave?: EventHandler;
   onLoad?: LoadEventHandler;
 }
+
+export type ImageMapperProps = ImageMapperProperties &
+  ImageMapperElementProps &
+  ImageMapperListeners;
 
 export interface ImageMapperPropsWithRef extends ImageMapperProps {
   ref?: Ref<RefProperties>;
